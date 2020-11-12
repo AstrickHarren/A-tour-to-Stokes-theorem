@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>CHAPTER 1 Partition of Unity | A Tour to Stokes’ theorem</title>
+  <meta name="description" content="CHAPTER 1 Partition of Unity | A Tour to Stokes’ theorem" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="CHAPTER 1 Partition of Unity | A Tour to Stokes’ theorem" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="CHAPTER 1 Partition of Unity | A Tour to Stokes’ theorem" />
+  
+  
+  
+
+<meta name="author" content="Astrick" />
+
+
+<meta name="date" content="2020-11-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="half-spaces.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Tour to Stokes Theorem</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="partition-of-unity.html"><a href="partition-of-unity.html"><i class="fa fa-check"></i><b>1</b> Partition of Unity</a><ul>
+<li class="chapter" data-level="1.1" data-path="partition-of-unity.html"><a href="partition-of-unity.html#construction-of-partition-of-unity"><i class="fa fa-check"></i><b>1.1</b> Construction of Partition of Unity</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="half-spaces.html"><a href="half-spaces.html"><i class="fa fa-check"></i><b>2</b> Half Spaces</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Tour to Stokes’ theorem</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="partition-of-unity" class="section level1">
+<h1><span class="header-section-number">CHAPTER 1</span> Partition of Unity</h1>
+<p>In elementary analysis courses, instructors present proofs of Stokes’ theorem in its simple forms first, usually on 2-dimensional rectangles. Then they attempt to decompose domains in <span class="math inline">\(ℝ^2\)</span> into such small rectangles, and argue the integrals over the entire domain is equal to the sum of those over the rectangles. This generalization of local conclusions to their global counterparts is performed formally with the technique shown here known as the partition of unity (definition <a href="partition-of-unity.html#def:partition-of-unity">1.3</a>).</p>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-1" class="definition"><strong>Definition 1.1  (Support)  </strong></span>
+The support of a function <span class="math inline">\(f: X → ℝ\)</span> of a topological space <span class="math inline">\(X\)</span> is the <em>closure</em> of the set</p>
+<p><span class="math display">\[
+\{x ∈ X: f(x) ≠ 0\}
+\]</span></p>
+<p><em>relative to</em> <span class="math inline">\(X\)</span>.</p>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Remark. </em></span> 
+Always remember the support of a function is the closure taken relative to its <em>domain of definition</em>.</p>
+</div>
+
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-3" class="definition"><strong>Definition 1.2  (Locally finite)  </strong></span>
+A collection of subsets <span class="math inline">\(\mathcal A\)</span> of a topological space <span class="math inline">\(X\)</span> is said to be locally finite in <span class="math inline">\(X\)</span> if</p>
+<ul>
+<li>all <span class="math inline">\(x ∈ X\)</span> has a neighborhood intersecting only finite many sets in <span class="math inline">\(\mathcal A\)</span>.</li>
+</ul>
+</div>
+
+
+<div class="definition">
+<p><span id="def:partition-of-unity" class="definition"><strong>Definition 1.3  (Partition of unity)  </strong></span>
+A collection of smooth functions <span class="math inline">\(\mathcal R = \{ρ: U → I = [0, 1]\}\)</span> is said to be a smooth partition of unity on open set <span class="math inline">\(U ⊂ ℝ^n\)</span> if</p>
+<ol style="list-style-type: decimal">
+<li><p>The supports
+<span class="math display">\[\{\mathop{\mathrm{supp}}ρ: ρ ∈ \mathcal R\}\]</span>
+is locally finite in <span class="math inline">\(X\)</span>;</p></li>
+<li><p>For all <span class="math inline">\(x ∈ U\)</span>,
+<span class="math display">\[\sum_{ρ ∈ \mathcal R} ρ(x) = 1,\]</span>
+where the notation is defined as
+<span class="math display">\[\sum_{ρ ∈ \mathcal R}ρ(x) := \sum_{ρ∈\mathcal R, ρ(x) ≠ 0}ρ(x)\]</span>
+which is a finite sum by above local finiteness.</p>
+</div></li>
+</ol>
+<div id="construction-of-partition-of-unity" class="section level2">
+<h2><span class="header-section-number">1.1</span> Construction of Partition of Unity</h2>
+<p>Readers by now should be familiar with the routine process of generalizing local properties into compact sets, but we wish to take a step further and generalize them into open sets. Analogous to that compact sets asserts a finite subcover of any of its open cover, we wish to guarantee, for any open set, a partition of unity <em>subordinate</em> to any of its open cover.</p>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-4" class="definition"><strong>Definition 1.4  (Subordination)  </strong></span>
+A partition of unity <span class="math inline">\(\{ρ_α: α ∈ A\}\)</span> on <span class="math inline">\(U\)</span> is said to be subordinate to an open cover <span class="math inline">\(\{U_α\}\)</span> of <span class="math inline">\(U\)</span> if</p>
+<ul>
+<li><span class="math inline">\(\mathop{\mathrm{supp}}ρ_α ⊂ U_α\)</span> for all <span class="math inline">\(α ∈ A\)</span>.</li>
+</ul>
+</div>
+
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-6" class="definition"><strong>Definition 1.5  (Bump function)  </strong></span>
+A function <span class="math inline">\(f: V → I = [0, 1]\)</span> of some open subset <span class="math inline">\(V ⊂ ℝ^n\)</span> is a bump function at <span class="math inline">\(x ∈ V\)</span> supported in <span class="math inline">\(U\)</span> if</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(f = 1\)</span> in a neighborhood of <span class="math inline">\(x\)</span>.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></li>
+<li><span class="math inline">\(\mathop{\mathrm{supp}}f ⊂ U\)</span>.</li>
+</ol>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:existence-of-bump-function" class="theorem"><strong>Theorem 1.1  </strong></span>
+For all <span class="math inline">\(x ∈ ℝ^n\)</span> and <span class="math inline">\(U, V\)</span> are two of its neighborhoods in <span class="math inline">\(ℝ^n\)</span>, there exists a smooth bump function <span class="math inline">\(f: V → I\)</span> at <span class="math inline">\(x\)</span> supported in <span class="math inline">\(U\)</span>.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Proof. </em></span> 
+<br/></p>
+<ol style="list-style-type: decimal">
+<li><p>The building block is
+<span class="math display">\[f(x) = \cases{0 &amp; x ≤ 0\\ \exp(-1/x) &amp; x ≥ 0}\]</span></p>
+<p>Obviously <span class="math inline">\(f\)</span> is smooth at all points except possibly <span class="math inline">\(0\)</span>, easy computation shows</p>
+<p><span class="math display">\[f^{(n)}(x) = O\left({\frac{\exp(-1/x)}{P(x)}}\right) \quad \mathop{\mathrm{as}}x → 0\]</span></p>
+<p>for some polynomial <span class="math inline">\(P\)</span> depending on <span class="math inline">\(n\)</span>. Notice <span class="math inline">\(f^{(0)}(0) = 0\)</span>, if <span class="math inline">\(f^{(n)}(0) = 0\)</span>,</p>
+<p><span class="math display">\[\frac{f^{(n)}(x)}{x} = O\left({\frac{\exp(-1/x)}{P(x)x}}\right) → 0 \quad \mathop{\mathrm{as}}x → 0\]</span></p>
+<p>shows <span class="math inline">\(f^{(n+1)}(0) = 0\)</span> and then <span class="math inline">\(f\)</span> is smooth on all <span class="math inline">\(ℝ\)</span>.</p></li>
+<li><p>Define <span class="math inline">\(g: ℝ → ℝ\)</span> by</p>
+<p><span class="math display">\[g(x) = \frac{f(x)}{f(x) + f(1-x)}.\]</span></p>
+<p>The function <span class="math inline">\(g\)</span> is a smooth function that behaves like a step function:</p>
+<p><span class="math display">\[g(x) = \begin{cases} 0 &amp; x ≤ 0\\ 1 &amp; x ≥ 1 \end{cases}\]</span></p></li>
+<li><p>If <span class="math inline">\(n = 1\)</span>, <span class="math inline">\(x = 0\)</span>, <span class="math inline">\(U = (-2r, 2r)\)</span>, <span class="math inline">\(V = ℝ\)</span> choose any <span class="math inline">\(0 &lt; s &lt; r\)</span> and define</p>
+<p><span class="math display">\[ρ(x) = g\left({\frac{r^2 - x^2}{r^2 - s^2}}\right)\]</span></p>
+<p>then <span class="math inline">\(ρ\)</span> is smooth, and</p>
+<p><span class="math display">\[ρ(x) = \begin{cases} 1 &amp; \lvert{x}\rvert ≤ s\\ 0 &amp; \lvert{x}\rvert &gt; r \end{cases}\]</span></p>
+<p>therefore, <span class="math inline">\(\mathop{\mathrm{supp}}ρ ⊂ [-r, r] ⊂ U\)</span>.</p></li>
+<li><p>If <span class="math inline">\(V = ℝ^n\)</span>, there is an open ball <span class="math inline">\(B\)</span> with radius <span class="math inline">\(2r\)</span> around <span class="math inline">\(x\)</span> contained in <span class="math inline">\(U\)</span>, put</p>
+<p><span class="math display">\[σ(x) = ρ(\lvert{x}\rvert)\]</span></p>
+<p>gives a smooth bump function that has support in <span class="math inline">\(B\)</span>. The function is smooth because <span class="math inline">\(\lvert{x}\rvert^2\)</span> is smooth (even when <span class="math inline">\(\lvert{x}\rvert\)</span> itself is not) and <span class="math inline">\(ρ\)</span> is a composition that takes square as its innermost function.</p></li>
+<li><p>Finally, if <span class="math inline">\(V\)</span> is any open subset of <span class="math inline">\(ℝ^n\)</span>, put</p>
+<p><span class="math display">\[η = σ|_V\]</span></p>
+<p>Obviously, the support<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+<p><span class="math display">\[\mathop{\mathrm{supp}}η = \mathop{\mathrm{supp}}σ|_V ⊂ \mathop{\mathrm{supp}}σ ⊂ U\]</span></p>
+<p>and <span class="math inline">\(η = 1\)</span> in a neighborhood of <span class="math inline">\(x\)</span> relative to <span class="math inline">\(V\)</span> since <span class="math inline">\(V\)</span> is open.</p></li>
+</ol>
+<p> </p>
+</div>
+
+
+<div class="proposition">
+<p><span id="prp:sigma-locally-compact" class="proposition"><strong>Proposition 1.1  </strong></span>
+Every open set <span class="math inline">\(U ⊂ ℝ^n\)</span> has a decomposition of open sets with compact closures
+<span class="math display">\[U = \bigcup_{n=1}^∞ V_i\]</span>
+such that
+<span class="math display">\[∅ = V_0 ⊂ \bar{V}_0 ⊂ V_1 ⊂ \bar{V}_1 ⊂ ⋯ ⊂ U\]</span></p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Proof. </em></span> 
+Notice the collection</p>
+<p><span class="math display">\[\mathcal B = \{B: \text{$B$ is an open ball such that $\bar B ⊂ U$}\}\]</span></p>
+<p>covers <span class="math inline">\(U\)</span>, and each open ball has a compact closure in <span class="math inline">\(U\)</span>. Recursively define</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(V_1 = B_1\)</span> for any <span class="math inline">\(B_1 ∈ \mathcal B\)</span>;</p></li>
+<li><p><span class="math inline">\(V_n\)</span> has compact closure in <span class="math inline">\(U\)</span> by induction hypothesis, and hence is covered by a finite sets in <span class="math inline">\(\mathcal B\)</span>. Define</p>
+<p><span class="math display">\[V_{n+1} := B_1 ∪ B_2 ∪ ⋯ ∪ B_{N+1}\]</span></p>
+<p>for some <span class="math inline">\(N\)</span> such that <span class="math inline">\(\bar V_{n} ⊂ V_{n+1}\)</span>.</p></li>
+</ol>
+<p>That <span class="math inline">\(\bar V_{n} \not⊂ V_{n}\)</span> (otherwise <span class="math inline">\(V_n\)</span> is both open and closed) shows in each step one must put an additional <span class="math inline">\(B_{N+1} ∈ B\)</span> to define <span class="math inline">\(V_{n+1}\)</span>, and hence <span class="math inline">\(N ≥ n\)</span>, showing</p>
+<p><span class="math display">\[\bigcup V_n = \bigcup B_n = U.\]</span></p>
+<p> </p>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:existence-of-compact-supported-partition-of-unity" class="theorem"><strong>Theorem 1.2  </strong></span>
+For all open set <span class="math inline">\(U ⊂ ℝ^n\)</span>, and an open cover <span class="math inline">\(\mathcal G\)</span> of <span class="math inline">\(U\)</span> with
+<!-- $$U = \bigcup_{W ∈ \mathcal G}W,$$ -->
+there exists a smooth partition of unity <span class="math inline">\(\mathcal R\)</span> such that</p>
+<ul>
+<li>each <span class="math inline">\(ρ ∈ \mathcal R\)</span> has its support <span class="math inline">\(\mathop{\mathrm{supp}}ρ ⊂ W\)</span> for some <span class="math inline">\(W ∈ \mathcal G\)</span>.</li>
+</ul>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Proof. </em></span> 
+Let <span class="math inline">\(\{V_n\}\)</span> be the decomposition of <span class="math inline">\(U\)</span> given by previous proposition <a href="partition-of-unity.html#prp:sigma-locally-compact">1.1</a>, define</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(K_n = \bar{V}_{n+1}\backslash V_n\)</span>, <span class="math inline">\(n = 0, …\)</span></li>
+<li><span class="math inline">\(U_n = V_{n+1}\backslash \bar{V}_{n-1}\)</span>, <span class="math inline">\(n = 1, …\)</span></li>
+</ol>
+<p>Clearly,</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(K_n\)</span> is compact while <span class="math inline">\(U_n\)</span> is open;</li>
+<li>The union of <span class="math inline">\(K_n\)</span> comprises <span class="math inline">\(U\)</span>;</li>
+<li><span class="math inline">\(\{U_n\}\)</span> is locally finite.</li>
+</ol>
+<p>Now since <span class="math inline">\(K_n\)</span> is compact, by theorem <a href="partition-of-unity.html#thm:existence-of-bump-function">1.1</a>, there exists a <em>finite</em> set of smooth functions</p>
+<p><span class="math display">\[\mathcal R_n = \{ϕ: U → I\}\]</span></p>
+<p>such that</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(ϕ\)</span> is supported in <span class="math inline">\(G ∩ U_n\)</span> for some <span class="math inline">\(G ∈ \mathcal G\)</span>;</li>
+<li><span class="math display">\[\sum_{ϕ ∈ \mathcal R_n}ϕ(x) &gt; 0\]</span> for all <span class="math inline">\(x ∈ K_n\)</span>.</li>
+</ol>
+<p>Now that <span class="math inline">\(\{U_n\}\)</span> is locally finite, <span class="math inline">\(\mathcal R_n\)</span> only contains finite many functions, this implies the supports of functions in</p>
+<p><span class="math display">\[\mathcal R := \bigcup \mathcal R_n\]</span></p>
+<p>is locally finite (simple proof by contradiction), hence the sum</p>
+<p><span class="math display">\[Φ = \sum_{ϕ ∈ \mathcal R}ϕ ≥ \sum_{ϕ ∈ \mathcal R_n}ϕ\]</span></p>
+<p>is a finite sum positive on all <span class="math inline">\(K_n\)</span> and their union <span class="math inline">\(U\)</span>. This well defines the collection</p>
+<p><span class="math display">\[\{\frac{ϕ}{Φ}: ϕ ∈ \mathcal R\}\]</span></p>
+<p>as the desired partition of unity on <span class="math inline">\(U\)</span>.</p>
+</div>
+
+
+<div class="lemma">
+<p><span id="lem:closure-of-locally-finite-sets" class="lemma"><strong>Lemma 1.1  </strong></span>
+<span class="math display">\[
+\overline{\bigcup_{α ∈ A}S_α} = \bigcup_{α ∈ A}{\overline{S_α}}
+\]</span>
+if <span class="math inline">\(\{S_α: α ∈ A\}\)</span> is a collection of locally finite subsets of some topological space <span class="math inline">\(X\)</span>.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Proof. </em></span> 
+Put <span class="math inline">\(S = \bigcup S_α\)</span>, obviously
+<span class="math display">\[
+\bigcup \bar{S}_α ⊂ \bar S
+\]</span>
+since <span class="math inline">\(\bar S_α ⊂ \bar S\)</span> for each <span class="math inline">\(α ∈ A\)</span>. Conversely, for any <span class="math inline">\(x ∈ X\)</span>, it has a neighborhood intersecting
+<span class="math display">\[S_{α_1}, …, S_{α_n}\]</span>
+for some <span class="math inline">\(n\)</span>, and if <span class="math inline">\(x ∉\bar S_α\)</span> for all <span class="math inline">\(α\)</span>, <span class="math inline">\(x\)</span> has a neighborhood disjoint with any of the above sets and hence disjoint with the entire <span class="math inline">\(S\)</span>, and <span class="math inline">\(x ∉ \bar S\)</span>.</p>
+</div>
+
+
+<div class="corollary">
+<p><span id="cor:existence-of-subordinate-partition-of-unity" class="corollary"><strong>Corollary 1.1  </strong></span>
+For all open set <span class="math inline">\(U ⊂ ℝ^n\)</span>, and an open cover <span class="math inline">\(\{U_α: α ∈ A\}\)</span> of <span class="math inline">\(U\)</span>, there exists a smooth partition of unity <span class="math inline">\(\{ρ_α: α ∈ A\}\)</span> subordinate to it.</p>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Proof. </em></span> 
+Of course, let <span class="math inline">\(\mathcal R\)</span> be the partition of unity introduced by the theorem such that the support of every <span class="math inline">\(σ ∈ \mathcal R\)</span> is contained in <span class="math inline">\(U_{α}\)</span> for some <span class="math inline">\(α = τ(σ)\)</span> depending on <span class="math inline">\(σ\)</span> in its construction.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> Define
+<span class="math display">\[
+ρ_α = \sum_{τ(σ) = α}σ
+\]</span>
+1. By lemma <a href="partition-of-unity.html#lem:closure-of-locally-finite-sets">1.1</a>
+<span class="math display">\[
+    \mathop{\mathrm{supp}}ρ_α ⊂ \bigcup_{τ(σ) = α} \mathop{\mathrm{supp}}σ ⊂ U_α
+    \]</span>
+In addition, <span class="math inline">\(\{\mathop{\mathrm{supp}}ρ_α\}\)</span> is also locally finite because any <span class="math inline">\(x\)</span> intersecting with infinitely many <span class="math inline">\(\mathop{\mathrm{supp}}ρ_α\)</span> will do so with infinitely many <span class="math inline">\(\bigcup_{τ(σ)=α}\mathop{\mathrm{supp}}σ\)</span> each of which is disjoint from others and contains at least one <span class="math inline">\(\mathop{\mathrm{supp}}σ\)</span> for <span class="math inline">\(\mathop{\mathrm{supp}}ρ_α\)</span> not to be empty.</p>
+<ol start="2" style="list-style-type: decimal">
+<li><span class="math display">\[
+ \sum_{α ∈ A}ρ_α = \sum_{α ∈ A}\sum_{τ(σ) = α}σ = \sum_{σ ∈ \mathcal R}σ = 1
+ \]</span></li>
+</ol>
+</div>
+
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>It makes no difference to assert whether the neighborhood needs be taken relative to <span class="math inline">\(V\)</span> or <span class="math inline">\(ℝ^n\)</span>.<a href="partition-of-unity.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Again, the supports here are taken wrto their corresponding domains of definition<a href="partition-of-unity.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>Or one can resort to the Axiom of Choice for such choice function <span class="math inline">\(τ\)</span><a href="partition-of-unity.html#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="half-spaces.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["a-tour-to-stokes-theorem.pdf", "a-tour-to-stokes-theorem.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

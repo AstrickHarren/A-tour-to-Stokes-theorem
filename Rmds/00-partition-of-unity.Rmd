@@ -1,0 +1,271 @@
+# Partition of Unity
+
+In elementary analysis courses, instructors present proofs of Stokes' theorem in its simple forms first, usually on 2-dimensional rectangles. Then they attempt to decompose domains in $ℝ^2$ into such small rectangles, and argue the integrals over the entire domain is equal to the sum of those over the rectangles. This generalization of local conclusions to their global counterparts is performed formally with the technique shown here known as the partition of unity (definition \@ref(def:partition-of-unity)). 
+
+```{definition, , name="Support"}
+
+The support of a function $f: X → ℝ$ of a topological space $X$ is the *closure* of the set 
+
+$$
+\{x ∈ X: f(x) ≠ 0\}
+$$
+
+*relative to* $X$. 
+
+```
+
+```{remark}
+
+Always remember the support of a function is the closure taken relative to its *domain of definition*. 
+
+```
+
+```{definition, name="Locally finite"}
+
+A collection of subsets $\mathcal A$ of a topological space $X$ is said to be locally finite in $X$ if
+
+- all $x ∈ X$ has a neighborhood intersecting only finite many sets in $\mathcal A$.
+
+```
+
+```{definition, partition-of-unity, name="Partition of unity"}
+
+A collection of smooth functions $\mathcal R = \{ρ: U → I = [0, 1]\}$ is said to be a smooth partition of unity on open set $U ⊂ ℝ^n$ if
+
+1. The supports
+    $$\{\supp ρ: ρ ∈ \mathcal R\}$$
+    is locally finite in $X$;
+
+2. For all $x ∈ U$,
+    $$\sum_{ρ ∈ \mathcal R} ρ(x) = 1,$$
+    where the notation is defined as
+    $$\sum_{ρ ∈ \mathcal R}ρ(x) := \sum_{ρ∈\mathcal R, ρ(x) ≠ 0}ρ(x)$$
+    which is a finite sum by above local finiteness.
+```
+
+
+
+Construction of Partition of Unity
+---
+
+Readers by now should be familiar with the routine process of generalizing local properties into compact sets, but we wish to take a step further and generalize them into open sets. Analogous to that compact sets asserts a finite subcover of any of its open cover, we wish to guarantee, for any open set, a partition of unity *subordinate* to any of its open cover.
+
+
+```{definition, , name="Subordination"}
+
+A partition of unity $\{ρ_α: α ∈ A\}$ on $U$ is said to be subordinate to an open cover $\{U_α\}$ of $U$ if 
+
+- $\supp ρ_α ⊂ U_α$ for all $α ∈ A$. 
+
+```
+
+```{remark, echo=FALSE}
+
+By definition, $ρ_α$ are defined on $U$, and so is its support, taking closure relative to $U$. Therefore, it makes no difference if we only construct partitions of unity when the open cover $\{U_α\}$ is subsets of $U$, i.e., 
+$$
+U = \bigcup_{α ∈ A} U_α
+$$
+
+```
+
+```{definition, name="Bump function"}
+
+A function $f: V → I = [0, 1]$ of some open subset $V ⊂ ℝ^n$ is a bump function at $x ∈ V$ supported in $U$ if
+
+1. $f = 1$ in a neighborhood of $x$.^[It makes no difference to assert whether the neighborhood needs be taken relative to $V$ or $ℝ^n$.]
+2. $\supp f ⊂ U$.
+
+```
+
+```{theorem, existence-of-bump-function}
+
+ For all $x ∈ ℝ^n$ and $U, V$ are two of its neighborhoods in $ℝ^n$, there exists a smooth bump function $f: V → I$ at $x$ supported in $U$.
+
+```
+
+```{proof}
+
+ <br/>
+
+ 1.  The building block is
+      $$f(x) = \cases{0 & x ≤ 0\\ \exp(-1/x) & x ≥ 0}$$
+
+      Obviously $f$ is smooth at all points except possibly $0$, easy computation shows
+
+      $$f^{(n)}(x) = O\par{\frac{\exp(-1/x)}{P(x)}} \quad \as x → 0$$
+
+      for some polynomial $P$ depending on $n$. Notice $f^{(0)}(0) = 0$, if $f^{(n)}(0) = 0$,
+
+      $$\frac{f^{(n)}(x)}{x} = O\par{\frac{\exp(-1/x)}{P(x)x}} → 0 \quad \as x → 0$$
+
+      shows $f^{(n+1)}(0) = 0$ and then $f$ is smooth on all $ℝ$.
+
+2. Define $g: ℝ → ℝ$ by
+
+    $$g(x) = \frac{f(x)}{f(x) + f(1-x)}.$$
+
+    The function $g$ is a smooth function that behaves like a step function:
+
+    $$g(x) = \case{0 & x ≤ 0\\ 1 & x ≥ 1}$$
+
+3. If $n = 1$, $x = 0$, $U = (-2r, 2r)$, $V = ℝ$ choose any $0 < s < r$ and define
+
+    $$ρ(x) = g\par{\frac{r^2 - x^2}{r^2 - s^2}}$$
+
+    then $ρ$ is smooth, and
+
+    $$ρ(x) = \case{1 & \abs{x} ≤ s\\ 0 & \abs{x} > r}$$
+
+    therefore, $\supp ρ ⊂ [-r, r] ⊂ U$.
+
+4. If $V = ℝ^n$, there is an open ball $B$ with radius $2r$ around $x$ contained in $U$, put
+
+    $$σ(x) = ρ(\abs{x})$$
+
+    gives a smooth bump function that has support in $B$. The function is smooth because $\abs{x}^2$ is smooth (even when $\abs{x}$ itself is not) and $ρ$ is a composition that takes square as its innermost function.
+
+5. Finally, if $V$ is any open subset of $ℝ^n$, put 
+
+    $$η = σ|_V$$
+    
+    Obviously, the support^[Again, the supports here are taken wrto their corresponding domains of definition]
+
+    $$\supp η = \supp σ|_V ⊂ \supp σ ⊂ U$$
+    
+    and $η = 1$ in a neighborhood of $x$ relative to $V$ since $V$ is open. 
+
+
+&nbsp;
+
+```
+
+
+
+```{proposition, sigma-locally-compact}
+
+Every open set $U ⊂ ℝ^n$ has a decomposition of open sets with compact closures
+$$U = \bigcup_{n=1}^∞ V_i$$
+such that
+$$∅ = V_0 ⊂ \bar{V}_0 ⊂ V_1 ⊂ \bar{V}_1 ⊂ ⋯ ⊂ U$$
+
+```
+
+```{proof}
+
+Notice the collection
+
+$$\mathcal B = \{B: \text{$B$ is an open ball such that $\bar B ⊂ U$}\}$$
+
+covers $U$, and each open ball has a compact closure in $U$. Recursively define
+
+1. $V_1 = B_1$ for any $B_1 ∈ \mathcal B$;
+
+2. $V_n$ has compact closure in $U$ by induction hypothesis, and hence is covered by a finite sets in $\mathcal B$. Define
+
+    $$V_{n+1} := B_1 ∪ B_2 ∪ ⋯ ∪ B_{N+1}$$
+
+    for some $N$ such that $\bar V_{n} ⊂ V_{n+1}$.
+
+That $\bar V_{n} \not⊂ V_{n}$ (otherwise $V_n$ is both open and closed) shows in each step one must put an additional $B_{N+1} ∈ B$ to define $V_{n+1}$, and hence $N ≥ n$, showing
+
+$$\bigcup V_n = \bigcup B_n = U.$$
+
+&nbsp;
+
+```
+
+```{theorem, existence-of-compact-supported-partition-of-unity}
+
+For all open set $U ⊂ ℝ^n$, and an open cover $\mathcal G$ of $U$ with
+<!-- $$U = \bigcup_{W ∈ \mathcal G}W,$$ -->
+there exists a smooth partition of unity $\mathcal R$ such that
+
+- each $ρ ∈ \mathcal R$ has its support $\supp ρ ⊂ W$ for some $W ∈ \mathcal G$.
+
+```
+
+```{proof}
+
+Let $\{V_n\}$ be the decomposition of $U$ given by previous proposition \@ref(prp:sigma-locally-compact), define
+
+1. $K_n = \bar{V}_{n+1}\backslash V_n$, $n = 0, …$
+2. $U_n = V_{n+1}\backslash \bar{V}_{n-1}$, $n = 1, …$
+
+Clearly,
+
+1. $K_n$ is compact while $U_n$ is open;
+2. The union of $K_n$ comprises $U$;
+3. $\{U_n\}$ is locally finite.
+
+Now since $K_n$ is compact, by theorem \@ref(thm:existence-of-bump-function), there exists a *finite* set of smooth functions
+
+$$\mathcal R_n = \{ϕ: U → I\}$$
+
+such that
+
+1. $ϕ$ is supported in $G ∩ U_n$ for some $G ∈ \mathcal G$;
+2. $$\sum_{ϕ ∈ \mathcal R_n}ϕ(x) > 0$$ for all $x ∈ K_n$.
+
+Now that $\{U_n\}$ is locally finite, $\mathcal R_n$ only contains finite many functions, this implies the supports of functions in
+
+$$\mathcal R := \bigcup \mathcal R_n$$
+
+is locally finite (simple proof by contradiction), hence the sum
+
+$$Φ = \sum_{ϕ ∈ \mathcal R}ϕ ≥ \sum_{ϕ ∈ \mathcal R_n}ϕ$$
+
+is a finite sum positive on all $K_n$ and their union $U$. This well defines the collection
+
+$$\{\frac{ϕ}{Φ}: ϕ ∈ \mathcal R\}$$
+
+as the desired partition of unity on $U$.
+
+```
+
+```{lemma, closure-of-locally-finite-sets}
+
+$$
+\overline{\bigcup_{α ∈ A}S_α} = \bigcup_{α ∈ A}{\overline{S_α}}
+$$
+if $\{S_α: α ∈ A\}$ is a collection of locally finite subsets of some topological space $X$. 
+
+```
+
+```{proof}
+
+Put $S = \bigcup S_α$, obviously 
+$$
+\bigcup \bar{S}_α ⊂ \bar S
+$$
+since $\bar S_α ⊂ \bar S$ for each $α ∈ A$. Conversely, for any $x ∈ X$, it has a neighborhood intersecting
+$$S_{α_1}, …, S_{α_n}$$
+for some $n$, and if $x ∉\bar S_α$ for all $α$, $x$ has a neighborhood disjoint with any of the above sets and hence disjoint with the entire $S$, and $x ∉ \bar S$. 
+
+
+```
+
+```{corollary, existence-of-subordinate-partition-of-unity}
+
+For all open set $U ⊂ ℝ^n$, and an open cover $\{U_α: α ∈ A\}$ of $U$, there exists a smooth partition of unity $\{ρ_α: α ∈ A\}$ subordinate to it. 
+
+```
+
+```{proof}
+
+Of course, let $\mathcal R$ be the partition of unity introduced by the theorem such that the support of every $σ ∈ \mathcal R$ is contained in $U_{α}$ for some $α = τ(σ)$ depending on $σ$ in its construction.^[Or one can resort to the Axiom of Choice for such choice function $τ$] Define 
+$$
+ρ_α = \sum_{τ(σ) = α}σ
+$$
+1.  By lemma \@ref(lem:closure-of-locally-finite-sets)
+    $$
+    \supp ρ_α ⊂ \bigcup_{τ(σ) = α} \supp σ ⊂ U_α
+    $$
+    In addition, $\{\supp ρ_α\}$ is also locally finite because any $x$ intersecting with infinitely many $\supp ρ_α$ will do so with infinitely many $\bigcup_{τ(σ)=α}\supp σ$ each of which is disjoint from others and contains at least one $\supp σ$ for $\supp ρ_α$ not to be empty.
+
+2. 
+    $$
+    \sum_{α ∈ A}ρ_α = \sum_{α ∈ A}\sum_{τ(σ) = α}σ = \sum_{σ ∈ \mathcal R}σ = 1
+    $$
+
+
+```

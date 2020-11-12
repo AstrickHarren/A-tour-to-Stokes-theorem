@@ -1,0 +1,78 @@
+Half Spaces
+===
+
+The Stokes' formula involves integral taken over smooth manifolds (surfaces) and their boundaries. The simplest smooth manifold for one to imagine is perhaps $ℝ^n$ itself. However, it is hard to define the boundary of $ℝ^n$. In fact, it is a manifold without boundary. This motivated the discussion of $ℍ^n$, the simplest smooth manifold with boundary. 
+
+```{definition, , name="Half spaces"}
+
+The half space of dimension $n$ is given as 
+$$
+ℍ^n := \{x ∈ ℝ^n: π^n(x) ≥ 0\}
+$$
+where $π^n(x^1, …, x^n) = x^n$ is the $n$-th coordinate map. 
+
+```
+
+Stokes' formula also involves taking *exterior derivative* of a *smooth differential form*, the simplest of which is a real-valued smooth function, which we now define on the simplest smooth manifold with boundary.
+
+
+```{definition, , name="Smoothness"}
+
+A function $f: S → ℝ^m$ of an open subset $S$ relative to $ℍ^n$ is smooth *near* $x ∈ S$ if it admits a smooth extension in a neighborhood of $x$ relative to $ℝ^n$. That is, 
+
+- there exists $g: N → ℝ^m$ smooth on an neighborhood $N$ of $x$ relative to $ℝ^n$ such that $f(y) = g(y)$ for all $y ∈ N ∩ S$.
+
+The function $f$ is smooth if it is smooth near all points in $S$. 
+
+```
+
+```{remark}
+
+\n
+
+1. Notice $S$ does not have to be open in $ℝ^n$, in which case smoothness *at* a point in $S$ may not be defined. 
+
+2. Even if $S$ is open relative to $ℝ^n$, smooth *near* a point $x ∈ S$ can be different from that *at* $x$. That is, it is possible that a function is smooth at a point but not smooth on any of its neighborhood. For this reason, we call the above definition smoothness *near* a point even though majority of the literature directly defines it as smoothness *at* a point.
+
+3. Nevertheless, the definition of smooth functions coincide when $S$ is open in $ℝ^n$. In other words, if $S$ is open in $ℝ^n$, $f$ is smooth *at* all points in $S$ if and only if $f$ is smooth near all points in $S$. 
+
+```
+
+A neighborhood of a subset $S$ of $ℝ^n$ is any open set that contains it as a subset. As noted before, the passage from local to global properties is partition of unity (see definition \@ref(def:partition-of-unity)). Its application here generalizes the criterion for a function being smooth near a point to its entire domain of definition. 
+
+```{theorem, smooth-function-criterion}
+
+A function $f: S → ℝ^m$ of an open subset $S$ relative to $ℍ^n$ is smooth if and only if it admits a smooth extension in a neighborhood of $S$ relative to $ℝ^n$. That is, 
+
+- there exists $g: U → ℝ^m$ smooth on a neighborhood $U$ of $S$ relative to $ℝ^n$ such that $f(y) = g(y)$ for all $y ∈ S$. 
+
+```
+
+```{proof}
+
+If $f$ is smooth, then it is smooth near all points in $S$ admitting smooth extensions 
+
+$$g_x: U_x → ℝ^m$$
+
+for all $x$. Put $U = \bigcup_{x∈S} U_x$, and choose $\{ρ_x: U → ℝ\}_{x∈S}$ as a smooth partition of unity subordinate to $\{U_x\}_{x∈S}$. Extending $g_x$ to $U$ by defining $g_x = 0$ outside $U_x$, the product 
+$$
+ρ_xg_x: U → ℝ^m
+$$
+is smooth because it is certainly smooth at points inside $U_x$ where both functions are smooth, and also smooth at points outside $U_x$ because the support of $ρ_x$ and hence $ρ_xg_x$ is contained inside $U_x$, and the support is closed in $U$. That is, any point in $U\backslash U_x$ must have a neighborhood in $U$ on which $ρ_xg_x$ is constantly $0$. 
+
+By local finiteness of partitions of unity, the function
+$$
+g = \sum_{x ∈ S}ρ_xg_x
+$$
+is locally a finite sum of smooth functions hence a smooth function itself that extends $f$ to $U$. Because 
+$$
+ρ_x(y)g_x(y) = ρ_x(x)f(y)
+$$
+for all $y ∈ S∩U_x$ as $g_x$ extends $f$, and for all $y ∈ S\backslash U_x$ as both sides are zeroed out by $ρ_x(y)$, implying
+$$
+g(y) = \sum_{x ∈ S}ρ_x(y)g_x(y) = \sum_{x ∈ S}ρ_x(y)f(y) = f(y)
+$$
+for all $y ∈ S$.
+
+
+```

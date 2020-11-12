@@ -1,0 +1,36 @@
+---
+title: "A Tour to Stokes' theorem"
+author: "Astrick"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: ""
+---
+
+
+
+
+
+<!-- latex macros-->
+\newcommand{\abs}[1]{\lvert{#1}\rvert}
+\newcommand{\as}{\mathop{\mathrm{as}}}
+\newcommand{\supp}{\mathop{\mathrm{supp}}}
+\newcommand{\par}[1]{\left({#1}\right)}
+\newcommand{\case}[1]{\begin{cases} #1 \end{cases}}
+\newcommand{\inv}[1]{{#1}^{-1}}
+\newcommand{\dpartial}[2]{\frac{\partial {#1}}{\partial {#2}}}
+\renewcommand{\angle}[1]{\langle{#1}\rangle}
+
+
+# Preface {-}
+
+Elementary analysis students are often mysteriously introduced to the Stokes' theorem. In its elegant form
+
+$$∫_{∂Ω} ω = ∫_Ω dω,$$
+
+the greek letter $ω$ denotes an ill-defined *differential form*, the integral is taken over an equally ill-defined *surface* $Ω$, or *manifold* when speaking of higher dimensions, and $∂Ω$ its again ill-defined *boundary*.  As if ill-defined concepts are not enough, proofs of such a theorem can be found in introductory courses as well. As hard as instructors try, the ill-supported knowledge typically remains vague in the minds of math students and henceforth serves as a bane to those who wish to refine their understanding on the famous theorem. 
+
+This note aims to present to such students a rigorous experience on the construction and proof of Stokes' theorem and help undo their curses, and the note is solely committed to its purpose. That is, conventions are sometimes hardwired into contents and irrelevant famous results may be omitted at places where they come out most naturally. Those who long for more detailed and comprehensive experience should consult any other introductory book on smooth manifolds. On the bright side, minimal knowledge is required to tread through the note: basic topology and mathematical analysis are the only preliminaries. 
