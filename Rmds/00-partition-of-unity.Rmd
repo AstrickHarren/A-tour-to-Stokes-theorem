@@ -1,6 +1,6 @@
 # Partition of Unity
 
-In elementary analysis courses, instructors present proofs of Stokes' theorem in its simple forms first, usually on 2-dimensional rectangles. Then they attempt to decompose domains in $ℝ^2$ into such small rectangles, and argue the integrals over the entire domain is equal to the sum of those over the rectangles. This generalization of local conclusions to their global counterparts is performed formally with the technique shown here known as the partition of unity (definition \@ref(def:partition-of-unity)). 
+In elementary analysis courses, instructors present proofs of Stokes' theorem in its simple forms first, usually on 2-dimensional rectangles. They then attempt to take this result to general domains in $ℝ^2$ by decomposing them into such small rectangles, and argue the integrals over the entire domain is equal to the sum of those over the rectangles. Formally, such generalization of local conclusions to their global counterparts is performed with the help of a technique known as the partition of unity (definition \@ref(def:partition-of-unity)). 
 
 ```{definition, , name="Support"}
 
@@ -16,7 +16,7 @@ $$
 
 ```{remark}
 
-Always remember the support of a function is the closure taken relative to its *domain of definition*. 
+Always remember the support of a function is a closure taken relative to its *domain of definition*. 
 
 ```
 
@@ -68,18 +68,20 @@ $$
 
 ```
 
+To construct subordinate partitions of unity, it is crucial to find, for every open set, some function supported in that open set. The function can not be constantly $0$, otherwise it is not helpful in partitioning the unity. The simplest such smooth functions there exist are the bump functions. 
+
 ```{definition, name="Bump function"}
 
-A function $f: V → I = [0, 1]$ of some open subset $V ⊂ ℝ^n$ is a bump function at $x ∈ V$ supported in $U$ if
+A function $f: V → I = [0, 1]$ of some open subset $V ⊂ ℝ^n$ is a bump function at $p ∈ V$ supported in $U$ if
 
-1. $f = 1$ in a neighborhood of $x$.^[It makes no difference to assert whether the neighborhood needs be taken relative to $V$ or $ℝ^n$.]
+1. $f = 1$ in a neighborhood of $p$.^[It makes no difference to assert whether the neighborhood needs be taken relative to $V$ or $ℝ^n$.]
 2. $\supp f ⊂ U$.
 
 ```
 
 ```{theorem, existence-of-bump-function}
 
- For all $x ∈ ℝ^n$ and $U, V$ are two of its neighborhoods in $ℝ^n$, there exists a smooth bump function $f: V → I$ at $x$ supported in $U$.
+ For all $p ∈ ℝ^n$ and $U, V$ are two of its neighborhoods in $ℝ^n$, there exists a smooth bump function $f: V → I$ at $x$ supported in $U$.
 
 ```
 
@@ -108,7 +110,7 @@ A function $f: V → I = [0, 1]$ of some open subset $V ⊂ ℝ^n$ is a bump fun
 
     $$g(x) = \case{0 & x ≤ 0\\ 1 & x ≥ 1}$$
 
-3. If $n = 1$, $x = 0$, $U = (-2r, 2r)$, $V = ℝ$ choose any $0 < s < r$ and define
+3. If $n = 1$, $p = 0$, $U = (-2r, 2r)$ and $V = ℝ$, choose any $0 < s < r$ and define
 
     $$ρ(x) = g\par{\frac{r^2 - x^2}{r^2 - s^2}}$$
 
@@ -118,26 +120,27 @@ A function $f: V → I = [0, 1]$ of some open subset $V ⊂ ℝ^n$ is a bump fun
 
     therefore, $\supp ρ ⊂ [-r, r] ⊂ U$.
 
-4. If $V = ℝ^n$, there is an open ball $B$ with radius $2r$ around $x$ contained in $U$, put
+4. If $V = ℝ^n$, there is an open ball $B$ with radius $2r$ around $p$ contained in $U$, put
 
-    $$σ(x) = ρ(\abs{x})$$
+    $$σ(x) = ρ(\abs{x - p})$$
 
-    gives a smooth bump function that has support in $B$. The function is smooth because $\abs{x}^2$ is smooth (even when $\abs{x}$ itself is not) and $ρ$ is a composition that takes square as its innermost function.
+    gives a smooth bump function that has support in $B$. The function is smooth because $\abs{x - p}^2$ is smooth (even when $\abs{x - p}$ itself is not) and $ρ$ is a composition that takes square as its innermost function.
 
 5. Finally, if $V$ is any open subset of $ℝ^n$, put 
 
     $$η = σ|_V$$
     
-    Obviously, the support^[Again, the supports here are taken wrto their corresponding domains of definition]
+    Obviously, the support^[Again, the supports here are taken wrto their corresponding domains of definition. Verbosely, because $V ∩ \supp σ$ is close in $V$ by subspace topology, and it contains $\{x ∈ V: σ|_V(x) ≠ 0\}$, hence $\supp σ|_V ⊂ \supp σ$]
 
     $$\supp η = \supp σ|_V ⊂ \supp σ ⊂ U$$
     
-    and $η = 1$ in a neighborhood of $x$ relative to $V$ since $V$ is open. 
+    and $η = 1$ in a neighborhood of $p$ relative to $V$ since $V$ is open^[Verbosely again, if $σ = 1$ in a neighborhood $W$ of $p$ relative to $ℝ^n$, $η = 1$ in $p ∈ W ∩ V$, which is open by subspace topology. ]. 
 
 
 &nbsp;
 
 ```
+
 
 
 
@@ -252,15 +255,14 @@ For all open set $U ⊂ ℝ^n$, and an open cover $\{U_α: α ∈ A\}$ of $U$, t
 
 ```{proof}
 
-Of course, let $\mathcal R$ be the partition of unity introduced by the theorem such that the support of every $σ ∈ \mathcal R$ is contained in $U_{α}$ for some $α = τ(σ)$ depending on $σ$ in its construction.^[Or one can resort to the Axiom of Choice for such choice function $τ$] Define 
+Of course, let $\mathcal R$ be the partition of unity introduced by the theorem such that the support of every $σ ∈ \mathcal R$ is contained in $U_{α}$ for some $α = τ(σ)$ depending on $σ$ in its construction.^[Or one resorts to the Axiom of Choice for such choice function $τ$] Define 
 $$
 ρ_α = \sum_{τ(σ) = α}σ
 $$
-1.  By lemma \@ref(lem:closure-of-locally-finite-sets)
-    $$
-    \supp ρ_α ⊂ \bigcup_{τ(σ) = α} \supp σ ⊂ U_α
-    $$
-    In addition, $\{\supp ρ_α\}$ is also locally finite because any $x$ intersecting with infinitely many $\supp ρ_α$ will do so with infinitely many $\bigcup_{τ(σ)=α}\supp σ$ each of which is disjoint from others and contains at least one $\supp σ$ for $\supp ρ_α$ not to be empty.
+
+1. By lemma \@ref(lem:closure-of-locally-finite-sets)
+    $$\supp ρ_α ⊂ \bigcup_{τ(σ) = α} \supp σ ⊂ U_α$$
+    In addition, $\{\supp ρ_α\}$ is locally finite because any $x$ intersecting with infinitely many $\supp ρ_α$ will do so with infinitely many $\bigcup_{τ(σ)=α}\supp σ$ each of which is disjoint from others and contains at least one $\supp σ$ for $\supp ρ_α$ not to be empty.
 
 2. 
     $$

@@ -19,7 +19,7 @@ div.proof, #important{
     padding: 5px 0 0 7px;
 }
 
-div.definition, div.theorem, div.corollary, div.example {
+:not(:matches(h1, h2, h3, h4, .lemma)) + :matches(.definition, .theorem, .example, .proposition, .lemma) {
   margin-top: 37px;
 }
 
@@ -28,7 +28,11 @@ hr {
 
 }
 
-p:not(.definition p, .theorem p, .corollary p, .example p, .remark p, .proof p) {
+/* p:not(.definition p, .theorem p, .corollary p, .example p, .remark p, .proof p) {
+  margin-top: 37px !important;
+} */
+
+:matches(.definition, .theorem, .corollary, .example, .remark, .proof, .proposition, .lemma) + p {
   margin-top: 37px !important;
 }
 

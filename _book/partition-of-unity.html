@@ -24,7 +24,7 @@
 <meta name="author" content="Astrick" />
 
 
-<meta name="date" content="2020-11-12" />
+<meta name="date" content="2020-11-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -99,7 +99,7 @@
             <section class="normal" id="section-">
 <div id="partition-of-unity" class="section level1">
 <h1><span class="header-section-number">CHAPTER 1</span> Partition of Unity</h1>
-<p>In elementary analysis courses, instructors present proofs of Stokes’ theorem in its simple forms first, usually on 2-dimensional rectangles. Then they attempt to decompose domains in <span class="math inline">\(ℝ^2\)</span> into such small rectangles, and argue the integrals over the entire domain is equal to the sum of those over the rectangles. This generalization of local conclusions to their global counterparts is performed formally with the technique shown here known as the partition of unity (definition <a href="partition-of-unity.html#def:partition-of-unity">1.3</a>).</p>
+<p>In elementary analysis courses, instructors present proofs of Stokes’ theorem in its simple forms first, usually on 2-dimensional rectangles. They then attempt to take this result to general domains in <span class="math inline">\(ℝ^2\)</span> by decomposing them into such small rectangles, and argue the integrals over the entire domain is equal to the sum of those over the rectangles. Formally, such generalization of local conclusions to their global counterparts is performed with the help of a technique known as the partition of unity (definition <a href="partition-of-unity.html#def:partition-of-unity">1.3</a>).</p>
 
 <div class="definition">
 <p><span id="def:unnamed-chunk-1" class="definition"><strong>Definition 1.1  (Support)  </strong></span>
@@ -113,7 +113,7 @@ The support of a function <span class="math inline">\(f: X → ℝ\)</span> of a
 
 <div class="remark">
 <p> <span class="remark"><em>Remark. </em></span> 
-Always remember the support of a function is the closure taken relative to its <em>domain of definition</em>.</p>
+Always remember the support of a function is a closure taken relative to its <em>domain of definition</em>.</p>
 </div>
 
 
@@ -152,12 +152,13 @@ A partition of unity <span class="math inline">\(\{ρ_α: α ∈ A\}\)</span> on
 </ul>
 </div>
 
+<p>To construct subordinate partitions of unity, it is crucial to find, for every open set, some function supported in that open set. The function can not be constantly <span class="math inline">\(0\)</span>, otherwise it is not helpful in partitioning the unity. The simplest such smooth functions there exist are the bump functions.</p>
 
 <div class="definition">
 <p><span id="def:unnamed-chunk-6" class="definition"><strong>Definition 1.5  (Bump function)  </strong></span>
-A function <span class="math inline">\(f: V → I = [0, 1]\)</span> of some open subset <span class="math inline">\(V ⊂ ℝ^n\)</span> is a bump function at <span class="math inline">\(x ∈ V\)</span> supported in <span class="math inline">\(U\)</span> if</p>
+A function <span class="math inline">\(f: V → I = [0, 1]\)</span> of some open subset <span class="math inline">\(V ⊂ ℝ^n\)</span> is a bump function at <span class="math inline">\(p ∈ V\)</span> supported in <span class="math inline">\(U\)</span> if</p>
 <ol style="list-style-type: decimal">
-<li><span class="math inline">\(f = 1\)</span> in a neighborhood of <span class="math inline">\(x\)</span>.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></li>
+<li><span class="math inline">\(f = 1\)</span> in a neighborhood of <span class="math inline">\(p\)</span>.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></li>
 <li><span class="math inline">\(\mathop{\mathrm{supp}}f ⊂ U\)</span>.</li>
 </ol>
 </div>
@@ -165,7 +166,7 @@ A function <span class="math inline">\(f: V → I = [0, 1]\)</span> of some open
 
 <div class="theorem">
 <p><span id="thm:existence-of-bump-function" class="theorem"><strong>Theorem 1.1  </strong></span>
-For all <span class="math inline">\(x ∈ ℝ^n\)</span> and <span class="math inline">\(U, V\)</span> are two of its neighborhoods in <span class="math inline">\(ℝ^n\)</span>, there exists a smooth bump function <span class="math inline">\(f: V → I\)</span> at <span class="math inline">\(x\)</span> supported in <span class="math inline">\(U\)</span>.</p>
+For all <span class="math inline">\(p ∈ ℝ^n\)</span> and <span class="math inline">\(U, V\)</span> are two of its neighborhoods in <span class="math inline">\(ℝ^n\)</span>, there exists a smooth bump function <span class="math inline">\(f: V → I\)</span> at <span class="math inline">\(x\)</span> supported in <span class="math inline">\(U\)</span>.</p>
 </div>
 
 
@@ -184,19 +185,19 @@ For all <span class="math inline">\(x ∈ ℝ^n\)</span> and <span class="math i
 <p><span class="math display">\[g(x) = \frac{f(x)}{f(x) + f(1-x)}.\]</span></p>
 <p>The function <span class="math inline">\(g\)</span> is a smooth function that behaves like a step function:</p>
 <p><span class="math display">\[g(x) = \begin{cases} 0 &amp; x ≤ 0\\ 1 &amp; x ≥ 1 \end{cases}\]</span></p></li>
-<li><p>If <span class="math inline">\(n = 1\)</span>, <span class="math inline">\(x = 0\)</span>, <span class="math inline">\(U = (-2r, 2r)\)</span>, <span class="math inline">\(V = ℝ\)</span> choose any <span class="math inline">\(0 &lt; s &lt; r\)</span> and define</p>
+<li><p>If <span class="math inline">\(n = 1\)</span>, <span class="math inline">\(p = 0\)</span>, <span class="math inline">\(U = (-2r, 2r)\)</span> and <span class="math inline">\(V = ℝ\)</span>, choose any <span class="math inline">\(0 &lt; s &lt; r\)</span> and define</p>
 <p><span class="math display">\[ρ(x) = g\left({\frac{r^2 - x^2}{r^2 - s^2}}\right)\]</span></p>
 <p>then <span class="math inline">\(ρ\)</span> is smooth, and</p>
 <p><span class="math display">\[ρ(x) = \begin{cases} 1 &amp; \lvert{x}\rvert ≤ s\\ 0 &amp; \lvert{x}\rvert &gt; r \end{cases}\]</span></p>
 <p>therefore, <span class="math inline">\(\mathop{\mathrm{supp}}ρ ⊂ [-r, r] ⊂ U\)</span>.</p></li>
-<li><p>If <span class="math inline">\(V = ℝ^n\)</span>, there is an open ball <span class="math inline">\(B\)</span> with radius <span class="math inline">\(2r\)</span> around <span class="math inline">\(x\)</span> contained in <span class="math inline">\(U\)</span>, put</p>
-<p><span class="math display">\[σ(x) = ρ(\lvert{x}\rvert)\]</span></p>
-<p>gives a smooth bump function that has support in <span class="math inline">\(B\)</span>. The function is smooth because <span class="math inline">\(\lvert{x}\rvert^2\)</span> is smooth (even when <span class="math inline">\(\lvert{x}\rvert\)</span> itself is not) and <span class="math inline">\(ρ\)</span> is a composition that takes square as its innermost function.</p></li>
+<li><p>If <span class="math inline">\(V = ℝ^n\)</span>, there is an open ball <span class="math inline">\(B\)</span> with radius <span class="math inline">\(2r\)</span> around <span class="math inline">\(p\)</span> contained in <span class="math inline">\(U\)</span>, put</p>
+<p><span class="math display">\[σ(x) = ρ(\lvert{x - p}\rvert)\]</span></p>
+<p>gives a smooth bump function that has support in <span class="math inline">\(B\)</span>. The function is smooth because <span class="math inline">\(\lvert{x - p}\rvert^2\)</span> is smooth (even when <span class="math inline">\(\lvert{x - p}\rvert\)</span> itself is not) and <span class="math inline">\(ρ\)</span> is a composition that takes square as its innermost function.</p></li>
 <li><p>Finally, if <span class="math inline">\(V\)</span> is any open subset of <span class="math inline">\(ℝ^n\)</span>, put</p>
 <p><span class="math display">\[η = σ|_V\]</span></p>
 <p>Obviously, the support<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
 <p><span class="math display">\[\mathop{\mathrm{supp}}η = \mathop{\mathrm{supp}}σ|_V ⊂ \mathop{\mathrm{supp}}σ ⊂ U\]</span></p>
-<p>and <span class="math inline">\(η = 1\)</span> in a neighborhood of <span class="math inline">\(x\)</span> relative to <span class="math inline">\(V\)</span> since <span class="math inline">\(V\)</span> is open.</p></li>
+<p>and <span class="math inline">\(η = 1\)</span> in a neighborhood of <span class="math inline">\(p\)</span> relative to <span class="math inline">\(V\)</span> since <span class="math inline">\(V\)</span> is open<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>.</p></li>
 </ol>
 <p> </p>
 </div>
@@ -298,19 +299,17 @@ For all open set <span class="math inline">\(U ⊂ ℝ^n\)</span>, and an open c
 
 <div class="proof">
 <p> <span class="proof"><em>Proof. </em></span> 
-Of course, let <span class="math inline">\(\mathcal R\)</span> be the partition of unity introduced by the theorem such that the support of every <span class="math inline">\(σ ∈ \mathcal R\)</span> is contained in <span class="math inline">\(U_{α}\)</span> for some <span class="math inline">\(α = τ(σ)\)</span> depending on <span class="math inline">\(σ\)</span> in its construction.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> Define
+Of course, let <span class="math inline">\(\mathcal R\)</span> be the partition of unity introduced by the theorem such that the support of every <span class="math inline">\(σ ∈ \mathcal R\)</span> is contained in <span class="math inline">\(U_{α}\)</span> for some <span class="math inline">\(α = τ(σ)\)</span> depending on <span class="math inline">\(σ\)</span> in its construction.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> Define
 <span class="math display">\[
 ρ_α = \sum_{τ(σ) = α}σ
-\]</span>
-1. By lemma <a href="partition-of-unity.html#lem:closure-of-locally-finite-sets">1.1</a>
-<span class="math display">\[
-    \mathop{\mathrm{supp}}ρ_α ⊂ \bigcup_{τ(σ) = α} \mathop{\mathrm{supp}}σ ⊂ U_α
-    \]</span>
-In addition, <span class="math inline">\(\{\mathop{\mathrm{supp}}ρ_α\}\)</span> is also locally finite because any <span class="math inline">\(x\)</span> intersecting with infinitely many <span class="math inline">\(\mathop{\mathrm{supp}}ρ_α\)</span> will do so with infinitely many <span class="math inline">\(\bigcup_{τ(σ)=α}\mathop{\mathrm{supp}}σ\)</span> each of which is disjoint from others and contains at least one <span class="math inline">\(\mathop{\mathrm{supp}}σ\)</span> for <span class="math inline">\(\mathop{\mathrm{supp}}ρ_α\)</span> not to be empty.</p>
-<ol start="2" style="list-style-type: decimal">
-<li><span class="math display">\[
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li><p>By lemma <a href="partition-of-unity.html#lem:closure-of-locally-finite-sets">1.1</a>
+<span class="math display">\[\mathop{\mathrm{supp}}ρ_α ⊂ \bigcup_{τ(σ) = α} \mathop{\mathrm{supp}}σ ⊂ U_α\]</span>
+In addition, <span class="math inline">\(\{\mathop{\mathrm{supp}}ρ_α\}\)</span> is locally finite because any <span class="math inline">\(x\)</span> intersecting with infinitely many <span class="math inline">\(\mathop{\mathrm{supp}}ρ_α\)</span> will do so with infinitely many <span class="math inline">\(\bigcup_{τ(σ)=α}\mathop{\mathrm{supp}}σ\)</span> each of which is disjoint from others and contains at least one <span class="math inline">\(\mathop{\mathrm{supp}}σ\)</span> for <span class="math inline">\(\mathop{\mathrm{supp}}ρ_α\)</span> not to be empty.</p></li>
+<li><p><span class="math display">\[
  \sum_{α ∈ A}ρ_α = \sum_{α ∈ A}\sum_{τ(σ) = α}σ = \sum_{σ ∈ \mathcal R}σ = 1
- \]</span></li>
+ \]</span></p></li>
 </ol>
 </div>
 
@@ -321,8 +320,9 @@ In addition, <span class="math inline">\(\{\mathop{\mathrm{supp}}ρ_α\}\)</span
 <hr />
 <ol start="1">
 <li id="fn1"><p>It makes no difference to assert whether the neighborhood needs be taken relative to <span class="math inline">\(V\)</span> or <span class="math inline">\(ℝ^n\)</span>.<a href="partition-of-unity.html#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>Again, the supports here are taken wrto their corresponding domains of definition<a href="partition-of-unity.html#fnref2" class="footnote-back">↩︎</a></p></li>
-<li id="fn3"><p>Or one can resort to the Axiom of Choice for such choice function <span class="math inline">\(τ\)</span><a href="partition-of-unity.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Again, the supports here are taken wrto their corresponding domains of definition. Verbosely, because <span class="math inline">\(V ∩ \mathop{\mathrm{supp}}σ\)</span> is close in <span class="math inline">\(V\)</span> by subspace topology, and it contains <span class="math inline">\(\{x ∈ V: σ|_V(x) ≠ 0\}\)</span>, hence <span class="math inline">\(\mathop{\mathrm{supp}}σ|_V ⊂ \mathop{\mathrm{supp}}σ\)</span><a href="partition-of-unity.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>Verbosely again, if <span class="math inline">\(σ = 1\)</span> in a neighborhood <span class="math inline">\(W\)</span> of <span class="math inline">\(p\)</span> relative to <span class="math inline">\(ℝ^n\)</span>, <span class="math inline">\(η = 1\)</span> in <span class="math inline">\(p ∈ W ∩ V\)</span>, which is open by subspace topology. <a href="partition-of-unity.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>Or one resorts to the Axiom of Choice for such choice function <span class="math inline">\(τ\)</span><a href="partition-of-unity.html#fnref4" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -373,7 +373,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["a-tour-to-stokes-theorem.pdf", "a-tour-to-stokes-theorem.epub"],
+"download": null,
 "toc": {
 "collapse": "subsection"
 }

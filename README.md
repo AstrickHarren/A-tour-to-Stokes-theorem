@@ -1,1 +1,1 @@
-Math book on Stokes' theorem by **bookdown** (https://github.com/rstudio/bookdown).
+Math book on Stokes' theorem by [bookdown](https://github.com/rstudio/bookdown).
