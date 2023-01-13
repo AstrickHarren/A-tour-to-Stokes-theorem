@@ -1,5 +1,5 @@
 ---
-title: "A Tour to Stokes' theorem"
+title: "Introduction to Mechanics on Manifolds"
 author: "Astrick"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -27,11 +27,3 @@ description: ""
 
 
 # Preface {-}
-
-Elementary analysis students are often mysteriously introduced to the Stokes' theorem. In its elegant form
-
-$$∫_{∂Ω} ω = ∫_Ω dω,$$
-
-the greek letter $ω$ denotes an ill-defined *differential form*, the integral is taken over an equally ill-defined *surface* $Ω$, or *manifold* when speaking of higher dimensions, and $∂Ω$ its again ill-defined *boundary*.  As if ill-defined concepts are not enough, proofs of such a theorem can be found in introductory courses as well. As hard as instructors try, the ill-supported knowledge typically remains vague in the minds of math students and henceforth serves as a bane to those who wish to refine their understanding on the famous theorem. 
-
-This note aims to present to such students a rigorous experience on the construction and proof of Stokes' theorem and help undo their curses, and the note is solely committed to its purpose. That is, conventions are sometimes hardwired into contents and irrelevant famous results may be omitted at places where they come out most naturally. Those who long for more detailed and comprehensive experience should consult any other introductory book on smooth manifolds. On the bright side, minimal knowledge is required to tread through the note: basic topology and mathematical analysis are the only preliminaries. 
