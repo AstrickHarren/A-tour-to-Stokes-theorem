@@ -2,6 +2,6 @@ book_filename: "a-tour-to-stokes-theorem"
 delete_merged_file: true
 language:
   ui:
-    chapter_name: "CHAPTER "
+    chapter_name: ""
 
 rmd_subdir: ["Rmds"]
