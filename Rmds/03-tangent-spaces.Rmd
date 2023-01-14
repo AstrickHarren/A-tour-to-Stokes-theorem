@@ -144,3 +144,43 @@ where
 $F^i = y^i \circ F$.
 
 ```
+
+## Tangent Bundle
+
+```{definition, , name="Tangent bundle"}
+
+The disjoint union of all tangent spaces of a manifold is called its tangent bundle:
+$$
+TM = \bigsqcup T_pM = \bigcup {p} \times T_pM
+$$
+
+The following defines tangent bundle as a topological space.
+
+1. If $(U, \phi)$ is a chart of $M$, define
+    $$
+    TU = \bigcup_{p \in U} T_pM
+    $$
+
+2. The function $\bar\phi: TU \to \phi(U) \times \mathbb R^n$ defined with
+    $$
+    \bar \phi(p, v) = (\phi(p), c^1, \dots, c^n)
+    $$
+    where
+    $$
+    v = \sum c^i \left . \frac{\partial}{\partial x^i} \right \rvert_p
+    $$
+
+3. Transfer the topology from $U$ to $TU$, making $\bar \phi$ a homeomorphism
+
+4. Define the topology on $TM$ using
+    $$
+    \mathcal B = \{ B: \text{$B$ is open in $TU$ for some local coordinate $U \subset M$ } \}
+    $$
+    as its basis.
+
+The following defines tangent bundle as a smooth manifold.
+
+1. If $\{(U, \phi)\}$ is an atlas for $M$, then $\{TU, \bar \phi\}$ is an atlas
+for $TM$.
+
+```
