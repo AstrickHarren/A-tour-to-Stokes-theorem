@@ -1,0 +1,146 @@
+# Tangent Spaces
+
+```{definition, , name="Smoothness in manifolds"}
+
+A function $f: U \to N$ defined on an open set of a manifold $M$ is smooth at
+$p \in U$ if there are charts $(V, \phi), (W, \psi)$ centered at $p, f(p)$ resp. such that
+$$
+\psi \circ f \circ \phi^{-1}: \phi(V \cap U \cap f^{-1}(W)) \to \mathbb R^n
+$$
+is smooth at $p$ (in half spaces)
+
+A function is smooth if it is smooth everywhere defined.
+
+```
+
+```{proposition}
+Let $M, N, R$ be three manifolds, and $U, V$ open sets of $M, N$ resp. If functions
+$$
+f: U \to N, \quad
+g: V \to R
+$$
+are defined such that for some point $p \in U$,
+
+1. $f(p) \in V$
+2. $f$ is smooth at $p$ and $g$ is smooth at $f(p)$
+
+Then $g \circ f$ is smooth at $p$.
+```
+
+```{definition, , name="Germs"}
+
+Suppose $M$ is a manifold, and $p \in M$. The germs of $M$ at $p$ are defined as
+equivalence classes specified on the set of all functionals defined on a neighborhood
+of $p$ such that
+
+1. $f \sim g$ if they agrees on a (smaller) neighborhood of $p$.
+
+The set of all germs of $M$ at $p$ is denoted as $C^{\infty}_p(M)$.
+```
+
+```{definition}
+
+In similar fashion, define $C^\infty_p(M, N)$ as equivalance classes on the set of all
+smooth functions defined on a neighborhood of $p \in M$ whose ranges are contained
+in $N$ with the equivalence relation that
+
+1. $f \sim g$ if they agrees on a (smaller) neighborhood of $p$.
+
+```
+
+```{proposition}
+The germs $C^{\infty}_p(M)$ of a manifold at a point is a ring.
+```
+
+```{definition, , name="Tangent vectors"}
+
+A *derivation* or tangent vector at a point $p \in M$ in a manifold is any function $D: C_p^\infty(M) \to \mathbb R$
+such that
+$$
+D(fg) = (Df)g(p) + f(p)(Dg)
+$$
+
+The set of all tangent vectors at $p$ is called its tangent space, denoted by $T_pM$.
+```
+
+```{proposition}
+Tangent space at any point in any manifold is a vector space.
+```
+
+```{definition, , name="Differential"}
+Let $F \in C^\infty_p(M, N)$ be a smooth function defined on an open subset of a manifold $M$. If $F$ is smooth at $p$, then its differential
+at $p$ is defined as the map
+$$
+F_*: T_pM \to T_{f(p)}N
+$$
+such that
+$$
+F_*(X)(f) = X(f \circ F)
+$$
+for all $f \in C^\infty_{F(p)}(N)$.
+```
+
+```{proposition}
+Differentials are linear transformations between tangent spaces.
+```
+
+```{theorem, , name="Chain rule"}
+If $F \in C^\infty_p(M, N), G \in C^\infty_f(p)(N, R)$, then
+$$
+(F \circ G)_* = F_* \circ G_*
+$$
+```
+
+## Bases for Tangent Spaces
+
+```{definition, , name="Partial derivative"}
+
+If $M$ is a manifold, $p \in M$ is a point, and $\phi: U \to \mathbb R^n$ is a chart centered
+at $p$. Write
+$$
+\phi = (x^1, \dots, x^n)
+$$
+where $x^i: U \to \mathbb R^n$. Define
+$$
+\frac{\partial}{\partial x^i} \in T_pM
+$$
+with
+$$
+\frac{\partial}{\partial x^i}f = \left . \frac{\partial(f \circ \phi^{-1})}{\partial r^i} \right \rvert_{\phi(p)}
+$$
+where the right hand side is the usual partial derivative of functions defined in euclidean spaces.
+
+```
+
+```{theorem}
+
+Let $M$ be a manifold, and $\phi = (x^1, \dots, x^n)$ be a chart at $p \in M$. The partial derivatives
+$$
+\frac{\partial}{\partial x^1}, \quad \dots, \quad \frac{\partial}{\partial x^n}
+$$
+make up a basis for $T_pM$.
+
+```
+
+```{proof}
+
+It suffices to prove $T\mathbb H^n$ has dimension $n$, or that $T\mathbb H^n \simeq R^n$.
+Apply taylor's expansion with remainder on any $f \in C^\infty_p(\mathbb R^n)$ with
+$$
+f(x) = f(p) + \sum (x^i - p^i) g_i(x)
+$$
+where $g_i(p) = \left . \frac{\partial f}{\partial x^i} \right \rvert_p$.
+
+```
+
+```{proposition}
+
+If $F \in C^\infty_p(M, N)$, then in local coordinates,
+
+$$
+F_*\left (\frac{\partial}{\partial x^i} \right) = \sum \frac{\partial F^i}{\partial x^j} \frac{\partial}{\partial y^i}
+$$
+where
+$F^i = y^i \circ F$.
+
+```
