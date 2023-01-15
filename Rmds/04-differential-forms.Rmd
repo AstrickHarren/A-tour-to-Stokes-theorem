@@ -131,7 +131,7 @@ $$
 $$
 then $F^*\omega_p \in C^\infty(M, \bigwedge^k(T_p^*M))$ (see \@ref(prp:pull-back-char)).
 
-The pull back of a real function $h$ ($0$-form$) is the $0$-form
+The pull back of a real function $h$ ($0$-form) is the $0$-form
 $$
 F^*h = h \circ F
 $$
