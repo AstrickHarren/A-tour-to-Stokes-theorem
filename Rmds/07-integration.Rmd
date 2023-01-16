@@ -1,0 +1,41 @@
+# Integration
+
+::: {.definition name="Integration on Euclidean spaces"}
+
+If $A \subset \mathbb R^n$, and a smooth $n$-form $\omega$ is defined on a neighborhood of $A$, then with
+stardard coordinates, $\omega = f dx^1 \wedge \dots \wedge dx^n$, and its integration on $A$ is given by
+$$
+\int_A \omega = \int_A f(x) dx^1 \cdots dx^n
+$$
+
+:::
+
+::: {.definition name="Integration on Manifolds"}
+
+If $(U, \phi)$ is a chart of a manifold $M$, and $\omega$ is an $n$-form with
+compact support in $U$, then the integral of $\omega$ on $U$ is defined as
+$$
+\int_U \omega = \int_{\phi(U)} \left ((\phi)^{-1} \right)^* \omega
+$$
+
+If $\{(U, \phi)\}$ is an oriented atlas of $M$, choose a partition of unity $\{ \rho \}$ subordinate to
+the atlas. If $\omega$ is an $n$-form defined on $M$ with compact support, then
+$$
+\omega = \sum \rho \omega
+$$
+is a finite sum, and the integral of $\omega$ over $M$ with respect to the current orientation is defined as
+$$
+\int_M \omega = \sum \int_U \rho\omega
+$$
+
+:::
+
+::: {.theorem name="Stokes"}
+
+If $\omega$ is an $(n-1)$-form on a manifold $M$, then
+$$
+\int_M d\omega = \int_{\partial M} i^*\omega
+$$
+where $i: \partial M \to M$ is the natural inclusion.
+
+:::
