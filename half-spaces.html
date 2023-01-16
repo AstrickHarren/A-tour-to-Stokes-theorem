@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Half Spaces | Introduction to Mechanics on Manifolds</title>
+  <meta name="description" content="2 Half Spaces | Introduction to Mechanics on Manifolds" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Half Spaces | Introduction to Mechanics on Manifolds" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Half Spaces | Introduction to Mechanics on Manifolds" />
+  
+  
+  
+
+<meta name="author" content="Astrick" />
+
+
+<meta name="date" content="2023-01-16" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="partition-of-unity.html"/>
+<link rel="next" href="manifolds.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Tour to Stokes Theorem</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="partition-of-unity.html"><a href="partition-of-unity.html"><i class="fa fa-check"></i><b>1</b> Partition of Unity</a></li>
+<li class="chapter" data-level="2" data-path="half-spaces.html"><a href="half-spaces.html"><i class="fa fa-check"></i><b>2</b> Half Spaces</a></li>
+<li class="chapter" data-level="3" data-path="manifolds.html"><a href="manifolds.html"><i class="fa fa-check"></i><b>3</b> Manifolds</a></li>
+<li class="chapter" data-level="4" data-path="tangent-spaces.html"><a href="tangent-spaces.html"><i class="fa fa-check"></i><b>4</b> Tangent Spaces</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="tangent-spaces.html"><a href="tangent-spaces.html#bases-for-tangent-spaces"><i class="fa fa-check"></i><b>4.1</b> Bases for Tangent Spaces</a></li>
+<li class="chapter" data-level="4.2" data-path="tangent-spaces.html"><a href="tangent-spaces.html#tangent-bundle"><i class="fa fa-check"></i><b>4.2</b> Tangent Bundle</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="differential-forms.html"><a href="differential-forms.html"><i class="fa fa-check"></i><b>5</b> Differential Forms</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="differential-forms.html"><a href="differential-forms.html#exterior-power-of-cotangent-bundle"><i class="fa fa-check"></i><b>5.1</b> Exterior Power of Cotangent Bundle</a></li>
+<li class="chapter" data-level="5.2" data-path="differential-forms.html"><a href="differential-forms.html#differential-forms-1"><i class="fa fa-check"></i><b>5.2</b> Differential Forms</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="calculus-of-variation.html"><a href="calculus-of-variation.html"><i class="fa fa-check"></i><b>6</b> Calculus of variation</a></li>
+<li class="chapter" data-level="7" data-path="orientation.html"><a href="orientation.html"><i class="fa fa-check"></i><b>7</b> Orientation</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="orientation.html"><a href="orientation.html#orientation-by-differential-forms"><i class="fa fa-check"></i><b>7.1</b> Orientation by differential forms</a></li>
+<li class="chapter" data-level="7.2" data-path="orientation.html"><a href="orientation.html#orientation-by-atlas"><i class="fa fa-check"></i><b>7.2</b> Orientation by atlas</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="boundary.html"><a href="boundary.html"><i class="fa fa-check"></i><b>8</b> Boundary</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="boundary.html"><a href="boundary.html#interior-multiplication"><i class="fa fa-check"></i><b>8.1</b> Interior Multiplication</a></li>
+<li class="chapter" data-level="8.2" data-path="boundary.html"><a href="boundary.html#boundary-orientation"><i class="fa fa-check"></i><b>8.2</b> Boundary Orientation</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="integration.html"><a href="integration.html"><i class="fa fa-check"></i><b>9</b> Integration</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Mechanics on Manifolds</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="half-spaces" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Half Spaces<a href="half-spaces.html#half-spaces" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="definition">
+<p><span id="def:unnamed-chunk-5" class="definition"><strong>Definition 2.1  (Half spaces) </strong></span>The half space of dimension <span class="math inline">\(n\)</span> is given as
+<span class="math display">\[
+ℍ^n := \{x ∈ ℝ^n: π^n(x) ≥ 0\}
+\]</span>
+where <span class="math inline">\(π^n(x^1, …, x^n) = x^n\)</span> is the <span class="math inline">\(n\)</span>-th coordinate map.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-6" class="definition"><strong>Definition 2.2  (Smoothness in half spaces) </strong></span>Let <span class="math inline">\(S\)</span> be an open subset of <span class="math inline">\(\mathbb H^n\)</span>, and <span class="math inline">\(f: S \to \mathbb R^m\)</span>. The function
+<span class="math inline">\(f\)</span> is said to be smooth at <span class="math inline">\(p \in S\)</span> in <span class="math inline">\(\mathbb H^n\)</span> if it admits an smooth extension in a neighborhood
+of <span class="math inline">\(p\)</span> relative to <span class="math inline">\(\mathbb R^n\)</span>. That is,</p>
+<ol style="list-style-type: decimal">
+<li>There exists <span class="math inline">\(g: N \to \mathbb R^m\)</span> defined on an open set <span class="math inline">\(N \in \mathbb R^m\)</span> that
+contains <span class="math inline">\(p\)</span></li>
+<li><span class="math inline">\(f(x) = g(x)\)</span> for all <span class="math inline">\(x \in N \cap S\)</span>.</li>
+</ol>
+<p>If so, the differential of <span class="math inline">\(f\)</span> at <span class="math inline">\(p\)</span> is defined as the same of that of <span class="math inline">\(g\)</span>.</p>
+<p>In addition, function <span class="math inline">\(f\)</span> is said to be smooth in <span class="math inline">\(\mathbb H^n\)</span> (or simply smooth) if
+<span class="math inline">\(f\)</span> is smooth at every point in <span class="math inline">\(S\)</span>.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-7" class="theorem"><strong>Theorem 2.1  </strong></span>A function <span class="math inline">\(f: S \to \mathbb R^m\)</span> is smooth in <span class="math inline">\(\mathbb H^n\)</span> if and only if it admits
+an extension in a neighborhood of <span class="math inline">\(S\)</span> that is smooth in <span class="math inline">\(\mathbb R^n\)</span>.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:unnamed-chunk-8" class="proposition"><strong>Proposition 2.1  </strong></span></p>
+<ol style="list-style-type: decimal">
+<li>The composition of smooth functions are smooth.</li>
+<li>Chain rule.</li>
+</ol>
+</div>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="partition-of-unity.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="manifolds.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

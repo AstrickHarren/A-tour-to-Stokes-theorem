@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Differential Forms | Introduction to Mechanics on Manifolds</title>
+  <meta name="description" content="5 Differential Forms | Introduction to Mechanics on Manifolds" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Differential Forms | Introduction to Mechanics on Manifolds" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Differential Forms | Introduction to Mechanics on Manifolds" />
+  
+  
+  
+
+<meta name="author" content="Astrick" />
+
+
+<meta name="date" content="2023-01-16" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="tangent-spaces.html"/>
+<link rel="next" href="calculus-of-variation.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Tour to Stokes Theorem</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="partition-of-unity.html"><a href="partition-of-unity.html"><i class="fa fa-check"></i><b>1</b> Partition of Unity</a></li>
+<li class="chapter" data-level="2" data-path="half-spaces.html"><a href="half-spaces.html"><i class="fa fa-check"></i><b>2</b> Half Spaces</a></li>
+<li class="chapter" data-level="3" data-path="manifolds.html"><a href="manifolds.html"><i class="fa fa-check"></i><b>3</b> Manifolds</a></li>
+<li class="chapter" data-level="4" data-path="tangent-spaces.html"><a href="tangent-spaces.html"><i class="fa fa-check"></i><b>4</b> Tangent Spaces</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="tangent-spaces.html"><a href="tangent-spaces.html#bases-for-tangent-spaces"><i class="fa fa-check"></i><b>4.1</b> Bases for Tangent Spaces</a></li>
+<li class="chapter" data-level="4.2" data-path="tangent-spaces.html"><a href="tangent-spaces.html#tangent-bundle"><i class="fa fa-check"></i><b>4.2</b> Tangent Bundle</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="differential-forms.html"><a href="differential-forms.html"><i class="fa fa-check"></i><b>5</b> Differential Forms</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="differential-forms.html"><a href="differential-forms.html#exterior-power-of-cotangent-bundle"><i class="fa fa-check"></i><b>5.1</b> Exterior Power of Cotangent Bundle</a></li>
+<li class="chapter" data-level="5.2" data-path="differential-forms.html"><a href="differential-forms.html#differential-forms-1"><i class="fa fa-check"></i><b>5.2</b> Differential Forms</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="calculus-of-variation.html"><a href="calculus-of-variation.html"><i class="fa fa-check"></i><b>6</b> Calculus of variation</a></li>
+<li class="chapter" data-level="7" data-path="orientation.html"><a href="orientation.html"><i class="fa fa-check"></i><b>7</b> Orientation</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="orientation.html"><a href="orientation.html#orientation-by-differential-forms"><i class="fa fa-check"></i><b>7.1</b> Orientation by differential forms</a></li>
+<li class="chapter" data-level="7.2" data-path="orientation.html"><a href="orientation.html#orientation-by-atlas"><i class="fa fa-check"></i><b>7.2</b> Orientation by atlas</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="boundary.html"><a href="boundary.html"><i class="fa fa-check"></i><b>8</b> Boundary</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="boundary.html"><a href="boundary.html#interior-multiplication"><i class="fa fa-check"></i><b>8.1</b> Interior Multiplication</a></li>
+<li class="chapter" data-level="8.2" data-path="boundary.html"><a href="boundary.html#boundary-orientation"><i class="fa fa-check"></i><b>8.2</b> Boundary Orientation</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="integration.html"><a href="integration.html"><i class="fa fa-check"></i><b>9</b> Integration</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Mechanics on Manifolds</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="differential-forms" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Differential Forms<a href="differential-forms.html#differential-forms" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="definition">
+<p><span id="def:unnamed-chunk-33" class="definition"><strong>Definition 5.1  (Differential) </strong></span>If <span class="math inline">\(f \in C^\infty_p(M)\)</span>, then its differential at <span class="math inline">\(p\)</span> is defined to be the covector <span class="math inline">\(df \in T_pM^\vee\)</span> such that
+<span class="math display">\[
+(df)_p(X) = X(f)
+\]</span></p>
+</div>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-34" class="theorem"><strong>Theorem 5.1  </strong></span>At any point <span class="math inline">\(p \in M\)</span>, if <span class="math inline">\((U, x^1, \dots, x^n)\)</span> is a chart about <span class="math inline">\(p\)</span>, then the differentials
+<span class="math display">\[
+dx^1, \quad \dots, \quad dx^n
+\]</span>
+comprise a basis for <span class="math inline">\(T_pM^\vee\)</span> such that
+<span class="math display">\[
+df = \sum \frac{\partial f}{\partial x^i} dx^i
+\]</span>
+for any <span class="math inline">\(f \in C_p^\infty(M)\)</span></p>
+</div>
+<div id="exterior-power-of-cotangent-bundle" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Exterior Power of Cotangent Bundle<a href="differential-forms.html#exterior-power-of-cotangent-bundle" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unnamed-chunk-35" class="definition"><strong>Definition 5.2  (Cotangent Bundle) </strong></span>The cotangent bundle of a manifold <span class="math inline">\(M\)</span> is denoted by <span class="math inline">\(T^*M\)</span>, defined in similar fashion of tangent bundle.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-36" class="definition"><strong>Definition 5.3  (Alternating tensor) </strong></span>A <span class="math inline">\(k\)</span>-tensor on a vector space <span class="math inline">\(V\)</span> is defined as a <span class="math inline">\(k\)</span>-linear function
+<span class="math display">\[
+f: V \times \dots \times V \to \mathbb R
+\]</span>
+A <span class="math inline">\(0\)</span>-tensor is simply defined as a scalar in <span class="math inline">\(\mathbb R\)</span>.</p>
+<p>A tensor is alternating if
+<span class="math display">\[
+f(v_{\sigma(1)}, \dots, v_{\sigma(n)}) = \mathop{\mathrm{sgn}}(\sigma) f(v_1, \dots, v_n)
+\]</span>
+where <span class="math inline">\(\sigma\)</span> is a permutation.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-37" class="definition"><strong>Definition 5.4  (Exterior power of vector space) </strong></span>Let <span class="math inline">\(V\)</span> be a vector space, then the set of all alternating <span class="math inline">\(k\)</span>-tensors of <span class="math inline">\(V\)</span> is denoted with <span class="math inline">\(A_k(V)\)</span>
+<span class="math display">\[
+\begin{aligned}
+A_0(V) &amp;= \mathbb R \\
+A_1(V) &amp;= V^\vee \\
+\dots
+\end{aligned}
+\]</span></p>
+<p>Sometimes we also denote <span class="math inline">\(A_k(V) = \bigwedge^k(V^\vee)\)</span>, and refer to the space as the <span class="math inline">\(k\)</span>-th exterior
+power of <span class="math inline">\(V^\vee\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-38" class="definition"><strong>Definition 5.5  (Exterior power of the cotangent bundle) </strong></span>The disjoint union of all <span class="math inline">\(k\)</span>-th exterior power of all cotangent spaces of a manifold is called the
+<span class="math inline">\(k\)</span>-th exterior power of the manifold’s cotangent bundle.
+<span class="math display">\[
+\sideset{}{^k}\bigwedge(T^*M) = \bigsqcup_{p \in M} \sideset{}{^k}\bigwedge(T_p^*M) \\
+\]</span></p>
+</div>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-39" class="theorem"><strong>Theorem 5.2  </strong></span>At any point <span class="math inline">\(p \in M\)</span>, if <span class="math inline">\((U, x^1, \dots, x^n)\)</span> is a chart about <span class="math inline">\(p\)</span>, the
+collection is a basis for the vector space <span class="math inline">\(\bigwedge^k(T_p^*M)\)</span>
+<span class="math display">\[
+dx^I = dx^{i_1} \wedge \dots \wedge dx^{i_k}
+\]</span>
+where <span class="math inline">\(I = \{i_1, \dots, i_k\}\)</span> samples from <span class="math inline">\(1, \dots, n\)</span> without replacement.
+That is, if <span class="math inline">\(\omega \in \bigwedge^k(T_p^*M)\)</span> then
+<span class="math display">\[
+\alpha = \sum \alpha \left (\frac{\partial}{\partial x^I}\right ) dx^I
+\]</span>
+where
+<span class="math display">\[
+\frac{\partial}{\partial x^I} = \left (\frac{\partial}{\partial x^{i_1}}, \quad \dots, \quad \frac{\partial}{\partial x^{i_n}} \right )
+\]</span></p>
+</div>
+<div class="proposition">
+<p><span id="prp:unnamed-chunk-40" class="proposition"><strong>Proposition 5.1  </strong></span>The <span class="math inline">\(k\)</span>-th exterior power of the cotangent bundle can be defined as a smooth manifold in the similar
+fashion as tangent bundle.</p>
+</div>
+</div>
+<div id="differential-forms-1" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Differential Forms<a href="differential-forms.html#differential-forms-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unnamed-chunk-41" class="definition"><strong>Definition 5.6  (Differential forms) </strong></span>A differential <span class="math inline">\(k\)</span>-form
+<span class="math display">\[
+\omega: M \to \sideset{}{^k}\bigwedge(T^*M)
+\]</span>
+is a section of the vector bundle.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:unnamed-chunk-42" class="proposition"><strong>Proposition 5.2  </strong></span>If <span class="math inline">\(\omega\)</span> is a <span class="math inline">\(k\)</span>-form defined in a neighborhood of <span class="math inline">\(p\)</span>, and written in local coordinates about a point <span class="math inline">\(p\)</span>,
+<span class="math display">\[
+\omega = \sum a_I dx^I
+\]</span>
+then <span class="math inline">\(\omega\)</span> is smooth at <span class="math inline">\(p\)</span> iff all <span class="math inline">\(a^I\)</span> is smooth at <span class="math inline">\(p\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-43" class="definition"><strong>Definition 5.7  (Pull back) </strong></span>If <span class="math inline">\(F: U \subset M \to N\)</span> is a function defined about <span class="math inline">\(p\)</span>, and <span class="math inline">\(\alpha \in \bigwedge^k(T_p^*N)\)</span>,
+its pull back <span class="math inline">\(F_*\alpha \in \bigwedge^k(T_p^*M)\)</span> is defined as
+<span class="math display">\[
+F^*\alpha(X_1, \dots, X_n) = \alpha(F_*X_1, \dots, F_*X_n)
+\]</span></p>
+<p>If <span class="math inline">\(F \in C^\infty_p(M, N)\)</span> is a smooth function, <span class="math inline">\(\omega \in C^\infty(N, \bigwedge^k(T_p^*N))\)</span> is a <span class="math inline">\(k\)</span>-form, then its pull back is defined pointwise
+<span class="math display">\[
+(F^*\omega)_p = F^*(\omega_p)
+\]</span>
+then <span class="math inline">\(F^*\omega_p \in C^\infty(M, \bigwedge^k(T_p^*M))\)</span> (see <a href="differential-forms.html#prp:pull-back-char">5.3</a>).</p>
+<p>The pull back of a real function <span class="math inline">\(h\)</span> (<span class="math inline">\(0\)</span>-form) is the <span class="math inline">\(0\)</span>-form
+<span class="math display">\[
+F^*h = h \circ F
+\]</span></p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-44" class="definition"><strong>Definition 5.8  (Codifferential) </strong></span>If <span class="math inline">\(F \in C^\infty_p(M, N)\)</span>, the codifferential is its pull back of a <span class="math inline">\(1\)</span>-form, or equivalently, the dual of its
+differential, or equivalently,
+<span class="math display">\[
+F^*(\omega)(X) = \omega(F_* X)
+\]</span></p>
+</div>
+<div class="proposition">
+<p><span id="prp:pull-back-char" class="proposition"><strong>Proposition 5.3  </strong></span></p>
+<ol style="list-style-type: decimal">
+<li>If <span class="math inline">\(F \in C^\infty_p(M, N)\)</span>, then for any <span class="math inline">\(h \in C^\infty_p(N)\)</span>,
+<span class="math display">\[
+F^*(dh) = d(F^*h)
+\]</span></li>
+<li>If <span class="math inline">\(F \in C^\infty_p(M, N)\)</span>, <span class="math inline">\(\omega \in C^\infty_p(M, \bigwedge^r(T^*_M)), \tau \in C^\infty_p(M, \bigwedge^k(T^*_M))\)</span> then their wedge product
+<span class="math inline">\(\omega \wedge \tau \in C^\infty_p(M, \bigwedge^{r + k}(T^*_M))\)</span> and
+<span class="math display">\[
+F^*(\omega \wedge \tau) = F^*\omega \wedge F^*\tau
+\]</span></li>
+</ol>
+<p>This proves the pull back of a smooth form is smooth.</p>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="tangent-spaces.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="calculus-of-variation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

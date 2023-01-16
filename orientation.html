@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>7 Orientation | Introduction to Mechanics on Manifolds</title>
+  <meta name="description" content="7 Orientation | Introduction to Mechanics on Manifolds" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="7 Orientation | Introduction to Mechanics on Manifolds" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7 Orientation | Introduction to Mechanics on Manifolds" />
+  
+  
+  
+
+<meta name="author" content="Astrick" />
+
+
+<meta name="date" content="2023-01-16" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="calculus-of-variation.html"/>
+<link rel="next" href="boundary.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Tour to Stokes Theorem</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="partition-of-unity.html"><a href="partition-of-unity.html"><i class="fa fa-check"></i><b>1</b> Partition of Unity</a></li>
+<li class="chapter" data-level="2" data-path="half-spaces.html"><a href="half-spaces.html"><i class="fa fa-check"></i><b>2</b> Half Spaces</a></li>
+<li class="chapter" data-level="3" data-path="manifolds.html"><a href="manifolds.html"><i class="fa fa-check"></i><b>3</b> Manifolds</a></li>
+<li class="chapter" data-level="4" data-path="tangent-spaces.html"><a href="tangent-spaces.html"><i class="fa fa-check"></i><b>4</b> Tangent Spaces</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="tangent-spaces.html"><a href="tangent-spaces.html#bases-for-tangent-spaces"><i class="fa fa-check"></i><b>4.1</b> Bases for Tangent Spaces</a></li>
+<li class="chapter" data-level="4.2" data-path="tangent-spaces.html"><a href="tangent-spaces.html#tangent-bundle"><i class="fa fa-check"></i><b>4.2</b> Tangent Bundle</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="differential-forms.html"><a href="differential-forms.html"><i class="fa fa-check"></i><b>5</b> Differential Forms</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="differential-forms.html"><a href="differential-forms.html#exterior-power-of-cotangent-bundle"><i class="fa fa-check"></i><b>5.1</b> Exterior Power of Cotangent Bundle</a></li>
+<li class="chapter" data-level="5.2" data-path="differential-forms.html"><a href="differential-forms.html#differential-forms-1"><i class="fa fa-check"></i><b>5.2</b> Differential Forms</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="calculus-of-variation.html"><a href="calculus-of-variation.html"><i class="fa fa-check"></i><b>6</b> Calculus of variation</a></li>
+<li class="chapter" data-level="7" data-path="orientation.html"><a href="orientation.html"><i class="fa fa-check"></i><b>7</b> Orientation</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="orientation.html"><a href="orientation.html#orientation-by-differential-forms"><i class="fa fa-check"></i><b>7.1</b> Orientation by differential forms</a></li>
+<li class="chapter" data-level="7.2" data-path="orientation.html"><a href="orientation.html#orientation-by-atlas"><i class="fa fa-check"></i><b>7.2</b> Orientation by atlas</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="boundary.html"><a href="boundary.html"><i class="fa fa-check"></i><b>8</b> Boundary</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="boundary.html"><a href="boundary.html#interior-multiplication"><i class="fa fa-check"></i><b>8.1</b> Interior Multiplication</a></li>
+<li class="chapter" data-level="8.2" data-path="boundary.html"><a href="boundary.html#boundary-orientation"><i class="fa fa-check"></i><b>8.2</b> Boundary Orientation</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="integration.html"><a href="integration.html"><i class="fa fa-check"></i><b>9</b> Integration</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Mechanics on Manifolds</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="orientation" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">7</span> Orientation<a href="orientation.html#orientation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="definition">
+<p><span id="def:unlabeled-div-6" class="definition"><strong>Definition 7.1  (Orientation of vector space) </strong></span>If <span class="math inline">\(V\)</span> is a vector space of dimension <span class="math inline">\(n\)</span>, the set of all bases of <span class="math inline">\(V\)</span> is divided in two equivalence
+classes by the following equivalence relation:
+<span class="math display">\[
+\begin{pmatrix} a_1 &amp; \cdots &amp; a_n \end{pmatrix} \sim \begin{pmatrix} b_1 &amp; \cdots &amp; b_n \end{pmatrix}
+\]</span>
+if the change of basis matrix <span class="math inline">\(A\)</span>
+<span class="math display">\[
+\begin{pmatrix} a_1 &amp; \cdots &amp; a_n \end{pmatrix} A = \begin{pmatrix} b_1 &amp; \cdots &amp; b_n \end{pmatrix}
+\]</span>
+has a positive determinant.</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-7" class="definition"><strong>Definition 7.2  (Pointwise orientation) </strong></span>Suppose <span class="math inline">\(M\)</span> is a manifold, a pointwise orientation <span class="math inline">\(\mu\)</span> assigns each point
+<span class="math inline">\(p \in M\)</span> an orientation of its tangent space <span class="math inline">\(T_pM\)</span>. Since orientations are equivalent classes
+of bases, the pointwise orientation can be represented as a set of vector field <span class="math inline">\(X_1, \dots, X_n\)</span>
+on <span class="math inline">\(M\)</span>
+<span class="math display">\[
+\mu = [X_1, \dots, X_n]
+\]</span>
+such that <span class="math inline">\(\mu(p)\)</span> is the orientation specified by the basis <span class="math inline">\(X_1(p), \dots, X_n(p)\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-8" class="definition"><strong>Definition 7.3  (Continuous orientation) </strong></span>A pointwise orientation <span class="math inline">\(\mu\)</span> of a manifold is said to be continuous at <span class="math inline">\(p \in M\)</span> of dimension <span class="math inline">\(n\)</span>
+if it can be represented by a collection of continuous vector fields <span class="math inline">\(X_i\)</span> defined at a neighborhood of <span class="math inline">\(p\)</span>
+<span class="math display">\[
+\mu = [X_1, \dots, X_n]
+\]</span>
+where <span class="math inline">\(X_1, \dots, X_n\)</span> makes up a basis for the tangent space of any point in the neighborhood of <span class="math inline">\(p\)</span>.</p>
+<p>A manifold is orientable with orientation <span class="math inline">\(\mu\)</span> if <span class="math inline">\(\mu\)</span> is continuous everywhere.</p>
+</div>
+<div id="orientation-by-differential-forms" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Orientation by differential forms<a href="orientation.html#orientation-by-differential-forms" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-9" class="theorem"><strong>Theorem 7.1  </strong></span>A pointwise orientation <span class="math inline">\([X_1, \dots, X_n]\)</span> on a manifold <span class="math inline">\(M\)</span> is continuous at <span class="math inline">\(p\)</span> if and only if everywhere there is a local
+coordinate <span class="math inline">\((U, x^1, \dots, x^n)\)</span> such that
+<span class="math display">\[
+dx^1 \wedge \dots \wedge dx^n (X_1, \dots, X_n) &gt; 0
+\]</span>
+on <span class="math inline">\(U\)</span>.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-10" class="theorem"><strong>Theorem 7.2  </strong></span>A manifold <span class="math inline">\(M\)</span> of dimension <span class="math inline">\(n\)</span> is orientable if and only if there exists a nowhere vanishing smooth <span class="math inline">\(n\)</span>-form.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-11" class="proof"><em>Proof</em>. </span>Apply partition of unity on the previous theorem.</p>
+</div>
+</div>
+<div id="orientation-by-atlas" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Orientation by atlas<a href="orientation.html#orientation-by-atlas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unlabeled-div-12" class="definition"><strong>Definition 7.4  (Oriented altas) </strong></span>An atlas <span class="math inline">\(\{(\phi)\}\)</span> is oriented if the Jacobian of the change of coordinates
+<span class="math display">\[
+\psi \circ \phi^{-1}
+\]</span>
+is everywhere positive.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-13" class="theorem"><strong>Theorem 7.3  </strong></span>An atlas <span class="math inline">\(\{(x^1, \dots, x^n)\}\)</span> is oriented if and only if there exists a orientation <span class="math inline">\(n\)</span>-form <span class="math inline">\(\omega\)</span> such that
+<span class="math display">\[
+\omega\left ( \frac{\partial}{\partial x^1}, \dots, \frac{\partial}{\partial x^n}  \right ) &gt; 0
+\]</span>
+written in local coordinates.</p>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="calculus-of-variation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="boundary.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

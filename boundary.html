@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>8 Boundary | Introduction to Mechanics on Manifolds</title>
+  <meta name="description" content="8 Boundary | Introduction to Mechanics on Manifolds" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="8 Boundary | Introduction to Mechanics on Manifolds" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="8 Boundary | Introduction to Mechanics on Manifolds" />
+  
+  
+  
+
+<meta name="author" content="Astrick" />
+
+
+<meta name="date" content="2023-01-16" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="orientation.html"/>
+<link rel="next" href="integration.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Tour to Stokes Theorem</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="partition-of-unity.html"><a href="partition-of-unity.html"><i class="fa fa-check"></i><b>1</b> Partition of Unity</a></li>
+<li class="chapter" data-level="2" data-path="half-spaces.html"><a href="half-spaces.html"><i class="fa fa-check"></i><b>2</b> Half Spaces</a></li>
+<li class="chapter" data-level="3" data-path="manifolds.html"><a href="manifolds.html"><i class="fa fa-check"></i><b>3</b> Manifolds</a></li>
+<li class="chapter" data-level="4" data-path="tangent-spaces.html"><a href="tangent-spaces.html"><i class="fa fa-check"></i><b>4</b> Tangent Spaces</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="tangent-spaces.html"><a href="tangent-spaces.html#bases-for-tangent-spaces"><i class="fa fa-check"></i><b>4.1</b> Bases for Tangent Spaces</a></li>
+<li class="chapter" data-level="4.2" data-path="tangent-spaces.html"><a href="tangent-spaces.html#tangent-bundle"><i class="fa fa-check"></i><b>4.2</b> Tangent Bundle</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="differential-forms.html"><a href="differential-forms.html"><i class="fa fa-check"></i><b>5</b> Differential Forms</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="differential-forms.html"><a href="differential-forms.html#exterior-power-of-cotangent-bundle"><i class="fa fa-check"></i><b>5.1</b> Exterior Power of Cotangent Bundle</a></li>
+<li class="chapter" data-level="5.2" data-path="differential-forms.html"><a href="differential-forms.html#differential-forms-1"><i class="fa fa-check"></i><b>5.2</b> Differential Forms</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="calculus-of-variation.html"><a href="calculus-of-variation.html"><i class="fa fa-check"></i><b>6</b> Calculus of variation</a></li>
+<li class="chapter" data-level="7" data-path="orientation.html"><a href="orientation.html"><i class="fa fa-check"></i><b>7</b> Orientation</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="orientation.html"><a href="orientation.html#orientation-by-differential-forms"><i class="fa fa-check"></i><b>7.1</b> Orientation by differential forms</a></li>
+<li class="chapter" data-level="7.2" data-path="orientation.html"><a href="orientation.html#orientation-by-atlas"><i class="fa fa-check"></i><b>7.2</b> Orientation by atlas</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="boundary.html"><a href="boundary.html"><i class="fa fa-check"></i><b>8</b> Boundary</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="boundary.html"><a href="boundary.html#interior-multiplication"><i class="fa fa-check"></i><b>8.1</b> Interior Multiplication</a></li>
+<li class="chapter" data-level="8.2" data-path="boundary.html"><a href="boundary.html#boundary-orientation"><i class="fa fa-check"></i><b>8.2</b> Boundary Orientation</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="integration.html"><a href="integration.html"><i class="fa fa-check"></i><b>9</b> Integration</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Mechanics on Manifolds</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="boundary" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">8</span> Boundary<a href="boundary.html#boundary" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="definition">
+<p><span id="def:unlabeled-div-14" class="definition"><strong>Definition 8.1  (Boundary of half space) </strong></span>Recall the half space is defined as
+<span class="math display">\[
+\mathbb H^n = \{ (x^1, \dots, x^n) : x^n \ge 0 \}
+\]</span>
+Its boundary is defined as the set
+<span class="math display">\[
+\mathbb \partial H^n = \{ (x^1, \dots, x^n) : x^n = 0 \}
+\]</span>
+Its interior is the remainder of the set
+<span class="math display">\[
+\mathbb (H^n)^{\circ} = \{ (x^1, \dots, x^n) : x^n &gt; 0 \}
+\]</span></p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-15" class="theorem"><strong>Theorem 8.1  </strong></span>Let <span class="math inline">\(U, V\)</span> be open sets of <span class="math inline">\(\mathbb H^n\)</span>. If <span class="math inline">\(f: U \to V\)</span> is a smooth function in <span class="math inline">\(\mathbb H^n\)</span>, then <span class="math inline">\(f\)</span> maps interior point
+of <span class="math inline">\(\mathbb H^n\)</span> to interior point of <span class="math inline">\(\mathbb H^n\)</span>, and boundary points to boundary points.</p>
+</div>
+<p>::: {.definition name=“Boundary of manifolds”}</p>
+<p>If <span class="math inline">\(M\)</span> is a manifold of dimension <span class="math inline">\(n\)</span>, its boundary <span class="math inline">\(\partial M\)</span> is defined as the set of all points that is mapped to
+<span class="math inline">\(\partial \mathbb H^n\)</span> by some local chart of <span class="math inline">\(\mathbb M\)</span>.</p>
+<p>If <span class="math inline">\(\{(U, \phi) \}\)</span> is an atlas of <span class="math inline">\(M\)</span>, then <span class="math inline">\(\{ (U \cap \partial M, \phi |_{U \cap \partial M}) \}\)</span> can serve as an
+atlas of <span class="math inline">\(\partial M\)</span>, where
+<span class="math display">\[
+\phi|_{U \cap \partial M}: (U \cap \partial M) \to \partial \mathbb H^n = \mathbb R^{n - 1}
+\]</span>
+Hence <span class="math inline">\(\partial M\)</span> has dimension <span class="math inline">\(n - 1\)</span>.</p>
+<blockquote>
+<p>The above atlas maps neighborhoods of <span class="math inline">\(\partial M\)</span> to <span class="math inline">\(\mathbb R^{n-1}\)</span> not <span class="math inline">\(\mathbb H^{n-1}\)</span>, violating our definition.
+This is fixed by a diffeomorphism between <span class="math inline">\(\mathbb R^{n-1}\)</span> and any open ball <span class="math inline">\(B\)</span> of <span class="math inline">\(\mathbb R^{n-1}\)</span> that resides in <span class="math inline">\(\mathbb H^{n-1}\)</span>.</p>
+</blockquote>
+<div id="interior-multiplication" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Interior Multiplication<a href="boundary.html#interior-multiplication" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unlabeled-div-16" class="definition"><strong>Definition 8.2  (Interior multiplication) </strong></span>If <span class="math inline">\(\beta\)</span> is a <span class="math inline">\(k\)</span>-covector on a vector space <span class="math inline">\(V\)</span>, the interior multiplication, or <em>contraction</em> of <span class="math inline">\(\beta\)</span>
+with a vector <span class="math inline">\(v \in V\)</span> is the <span class="math inline">\((k - 1)\)</span>-covector
+<span class="math display">\[
+\iota_v \beta (v_2, \dots, v_k) = \beta(v, v_2, \dots, v_k)
+\]</span></p>
+<p>Define <span class="math inline">\(\iota_v(\beta) = 0\)</span> for any <span class="math inline">\(0\)</span>-covector <span class="math inline">\(\beta\)</span>.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-17" class="proposition"><strong>Proposition 8.1  </strong></span>For covectors <span class="math inline">\(\alpha^1, \dots, \alpha^k\)</span> on a vector space <span class="math inline">\(V\)</span>, and <span class="math inline">\(v \in V\)</span>
+<span class="math display">\[
+\iota_v(\alpha^1 \wedge \dots \wedge \alpha^k) = \sum^k_{i=1} (-1)^{i-1} \alpha^i(v)
+\alpha^1 \wedge \dots \wedge \hat {\alpha^i} \wedge \dots \wedge \alpha^k
+\]</span></p>
+</div>
+</div>
+<div id="boundary-orientation" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Boundary Orientation<a href="boundary.html#boundary-orientation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-18" class="proposition"><strong>Proposition 8.2  </strong></span>The inclusion map <span class="math inline">\(i: \partial M \to M\)</span> is smooth, its differential is an injection
+from tangent spaces of <span class="math inline">\(\partial M\)</span> to those of <span class="math inline">\(M\)</span>. However, such injection is
+not a surjection, and in particular <span class="math inline">\(\partial/\partial x_n\)</span> is not in the range
+for any local chart <span class="math inline">\((x^1, \dots, x^n)\)</span> of <span class="math inline">\(M\)</span>.</p>
+</div>
+<blockquote>
+<p>At a point <span class="math inline">\(p \in \partial M\)</span>, identify the tangent space <span class="math inline">\(T_p(\partial M)\)</span> as a
+subspace of <span class="math inline">\(T_pM\)</span> by the above proposition.</p>
+</blockquote>
+<div class="definition">
+<p><span id="def:unlabeled-div-19" class="definition"><strong>Definition 8.3  (Outward pointing vector) </strong></span>A vector <span class="math inline">\(X\)</span> of <span class="math inline">\(T_pM \setminus T_p \partial M\)</span> at <span class="math inline">\(p \in \partial M\)</span> is said to be <em>inward pointing</em> if there exists curve
+<span class="math inline">\(c: (-1, 1) \to M\)</span> such that</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(c(0, 1) \subset M^\circ\)</span></li>
+<li><span class="math inline">\(c(0) = p\)</span></li>
+<li><span class="math inline">\(c&#39;(0) = X\)</span></li>
+</ol>
+<p>The vector <span class="math inline">\(X\)</span> is outward pointing if <span class="math inline">\(-X\)</span> is inward pointing.</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-20" class="definition"><strong>Definition 8.4  (Smooth outward pointing vector field) </strong></span>A vector field <em>along</em> <span class="math inline">\(\partial M\)</span> assigns each <span class="math inline">\(p \in \partial M\)</span> a vector <span class="math inline">\(X_p \in T_pM\)</span>. Such
+vector field is said to be smooth at <span class="math inline">\(p\)</span> if written in local coordinates of <span class="math inline">\(M\)</span>,
+<span class="math display">\[
+X = \sum a_i \frac{\partial}{\partial x^i}
+\]</span>
+<span class="math inline">\(a_i\)</span> is smooth at <span class="math inline">\(p\)</span> in <span class="math inline">\(\partial M\)</span>, i.e., <span class="math inline">\(a_i \in C^\infty_p(\partial M)\)</span>.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-21" class="theorem"><strong>Theorem 8.2  </strong></span>There exists a smooth outward pointing vector field along <span class="math inline">\(\partial M\)</span> for any smooth manifold <span class="math inline">\(M\)</span>.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-22" class="theorem"><strong>Theorem 8.3  </strong></span>If <span class="math inline">\(\omega\)</span> is an orientation form of <span class="math inline">\(M\)</span>, and <span class="math inline">\(X\)</span> is a smooth outward pointing vector field
+along <span class="math inline">\(\partial M\)</span>, then <span class="math inline">\(\iota_X\omega\)</span> is an orientation form of <span class="math inline">\(\partial M\)</span>.</p>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="orientation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="integration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

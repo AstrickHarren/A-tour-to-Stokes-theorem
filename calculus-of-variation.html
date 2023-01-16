@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6 Calculus of variation | Introduction to Mechanics on Manifolds</title>
+  <meta name="description" content="6 Calculus of variation | Introduction to Mechanics on Manifolds" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="6 Calculus of variation | Introduction to Mechanics on Manifolds" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="6 Calculus of variation | Introduction to Mechanics on Manifolds" />
+  
+  
+  
+
+<meta name="author" content="Astrick" />
+
+
+<meta name="date" content="2023-01-16" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="differential-forms.html"/>
+<link rel="next" href="orientation.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Tour to Stokes Theorem</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="partition-of-unity.html"><a href="partition-of-unity.html"><i class="fa fa-check"></i><b>1</b> Partition of Unity</a></li>
+<li class="chapter" data-level="2" data-path="half-spaces.html"><a href="half-spaces.html"><i class="fa fa-check"></i><b>2</b> Half Spaces</a></li>
+<li class="chapter" data-level="3" data-path="manifolds.html"><a href="manifolds.html"><i class="fa fa-check"></i><b>3</b> Manifolds</a></li>
+<li class="chapter" data-level="4" data-path="tangent-spaces.html"><a href="tangent-spaces.html"><i class="fa fa-check"></i><b>4</b> Tangent Spaces</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="tangent-spaces.html"><a href="tangent-spaces.html#bases-for-tangent-spaces"><i class="fa fa-check"></i><b>4.1</b> Bases for Tangent Spaces</a></li>
+<li class="chapter" data-level="4.2" data-path="tangent-spaces.html"><a href="tangent-spaces.html#tangent-bundle"><i class="fa fa-check"></i><b>4.2</b> Tangent Bundle</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="differential-forms.html"><a href="differential-forms.html"><i class="fa fa-check"></i><b>5</b> Differential Forms</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="differential-forms.html"><a href="differential-forms.html#exterior-power-of-cotangent-bundle"><i class="fa fa-check"></i><b>5.1</b> Exterior Power of Cotangent Bundle</a></li>
+<li class="chapter" data-level="5.2" data-path="differential-forms.html"><a href="differential-forms.html#differential-forms-1"><i class="fa fa-check"></i><b>5.2</b> Differential Forms</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="calculus-of-variation.html"><a href="calculus-of-variation.html"><i class="fa fa-check"></i><b>6</b> Calculus of variation</a></li>
+<li class="chapter" data-level="7" data-path="orientation.html"><a href="orientation.html"><i class="fa fa-check"></i><b>7</b> Orientation</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="orientation.html"><a href="orientation.html#orientation-by-differential-forms"><i class="fa fa-check"></i><b>7.1</b> Orientation by differential forms</a></li>
+<li class="chapter" data-level="7.2" data-path="orientation.html"><a href="orientation.html#orientation-by-atlas"><i class="fa fa-check"></i><b>7.2</b> Orientation by atlas</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="boundary.html"><a href="boundary.html"><i class="fa fa-check"></i><b>8</b> Boundary</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="boundary.html"><a href="boundary.html#interior-multiplication"><i class="fa fa-check"></i><b>8.1</b> Interior Multiplication</a></li>
+<li class="chapter" data-level="8.2" data-path="boundary.html"><a href="boundary.html#boundary-orientation"><i class="fa fa-check"></i><b>8.2</b> Boundary Orientation</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="integration.html"><a href="integration.html"><i class="fa fa-check"></i><b>9</b> Integration</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Mechanics on Manifolds</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="calculus-of-variation" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">6</span> Calculus of variation<a href="calculus-of-variation.html#calculus-of-variation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="definition">
+<p><span id="def:unlabeled-div-5" class="definition"><strong>Definition 6.1  (Calculus of variation) </strong></span>Suppose <span class="math inline">\(M\)</span> is a manifold, and <span class="math inline">\(L: TM \to \mathbb R\)</span> is a smooth functional. A
+curve <span class="math inline">\(\gamma: \mathbb R \to M\)</span> is said to be a critical point of calculus of
+variations if in local coordinates <span class="math inline">\((U, q, \dot q)\)</span>,
+<span class="math display">\[
+\frac{d}{dt} \left ( \frac{\partial L}{\partial \dot q} \circ \gamma_* \right) -
+\frac{\partial L}{\partial q} \circ \gamma_* = 0
+\]</span>
+where
+<span class="math display">\[
+\begin{aligned}
+\frac{\partial L}{\partial q} &amp;= \left ( \frac{\partial L}{\partial q^1}, \quad \dots, \quad \frac{\partial L}{\partial q^n} \right ) \\
+\gamma_* &amp;= (\gamma, \gamma&#39;)
+\end{aligned}
+\]</span></p>
+</div>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="differential-forms.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="orientation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

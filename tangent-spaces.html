@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Tangent Spaces | Introduction to Mechanics on Manifolds</title>
+  <meta name="description" content="4 Tangent Spaces | Introduction to Mechanics on Manifolds" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Tangent Spaces | Introduction to Mechanics on Manifolds" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Tangent Spaces | Introduction to Mechanics on Manifolds" />
+  
+  
+  
+
+<meta name="author" content="Astrick" />
+
+
+<meta name="date" content="2023-01-16" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="manifolds.html"/>
+<link rel="next" href="differential-forms.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Tour to Stokes Theorem</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="partition-of-unity.html"><a href="partition-of-unity.html"><i class="fa fa-check"></i><b>1</b> Partition of Unity</a></li>
+<li class="chapter" data-level="2" data-path="half-spaces.html"><a href="half-spaces.html"><i class="fa fa-check"></i><b>2</b> Half Spaces</a></li>
+<li class="chapter" data-level="3" data-path="manifolds.html"><a href="manifolds.html"><i class="fa fa-check"></i><b>3</b> Manifolds</a></li>
+<li class="chapter" data-level="4" data-path="tangent-spaces.html"><a href="tangent-spaces.html"><i class="fa fa-check"></i><b>4</b> Tangent Spaces</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="tangent-spaces.html"><a href="tangent-spaces.html#bases-for-tangent-spaces"><i class="fa fa-check"></i><b>4.1</b> Bases for Tangent Spaces</a></li>
+<li class="chapter" data-level="4.2" data-path="tangent-spaces.html"><a href="tangent-spaces.html#tangent-bundle"><i class="fa fa-check"></i><b>4.2</b> Tangent Bundle</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="differential-forms.html"><a href="differential-forms.html"><i class="fa fa-check"></i><b>5</b> Differential Forms</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="differential-forms.html"><a href="differential-forms.html#exterior-power-of-cotangent-bundle"><i class="fa fa-check"></i><b>5.1</b> Exterior Power of Cotangent Bundle</a></li>
+<li class="chapter" data-level="5.2" data-path="differential-forms.html"><a href="differential-forms.html#differential-forms-1"><i class="fa fa-check"></i><b>5.2</b> Differential Forms</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="calculus-of-variation.html"><a href="calculus-of-variation.html"><i class="fa fa-check"></i><b>6</b> Calculus of variation</a></li>
+<li class="chapter" data-level="7" data-path="orientation.html"><a href="orientation.html"><i class="fa fa-check"></i><b>7</b> Orientation</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="orientation.html"><a href="orientation.html#orientation-by-differential-forms"><i class="fa fa-check"></i><b>7.1</b> Orientation by differential forms</a></li>
+<li class="chapter" data-level="7.2" data-path="orientation.html"><a href="orientation.html#orientation-by-atlas"><i class="fa fa-check"></i><b>7.2</b> Orientation by atlas</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="boundary.html"><a href="boundary.html"><i class="fa fa-check"></i><b>8</b> Boundary</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="boundary.html"><a href="boundary.html#interior-multiplication"><i class="fa fa-check"></i><b>8.1</b> Interior Multiplication</a></li>
+<li class="chapter" data-level="8.2" data-path="boundary.html"><a href="boundary.html#boundary-orientation"><i class="fa fa-check"></i><b>8.2</b> Boundary Orientation</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="integration.html"><a href="integration.html"><i class="fa fa-check"></i><b>9</b> Integration</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Mechanics on Manifolds</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="tangent-spaces" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Tangent Spaces<a href="tangent-spaces.html#tangent-spaces" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="definition">
+<p><span id="def:unnamed-chunk-18" class="definition"><strong>Definition 4.1  (Smoothness in manifolds) </strong></span>A function <span class="math inline">\(f: U \to N\)</span> defined on an open set of a manifold <span class="math inline">\(M\)</span> is smooth at
+<span class="math inline">\(p \in U\)</span> if there are charts <span class="math inline">\((V, \phi), (W, \psi)\)</span> centered at <span class="math inline">\(p, f(p)\)</span> resp. such that
+<span class="math display">\[
+\psi \circ f \circ \phi^{-1}: \phi(V \cap U \cap f^{-1}(W)) \to \mathbb R^n
+\]</span>
+is smooth at <span class="math inline">\(p\)</span> (in half spaces)</p>
+<p>A function is smooth if it is smooth everywhere defined.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:unnamed-chunk-19" class="proposition"><strong>Proposition 4.1  </strong></span>Let <span class="math inline">\(M, N, R\)</span> be three manifolds, and <span class="math inline">\(U, V\)</span> open sets of <span class="math inline">\(M, N\)</span> resp. If functions
+<span class="math display">\[
+f: U \to N, \quad
+g: V \to R
+\]</span>
+are defined such that for some point <span class="math inline">\(p \in U\)</span>,</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(f(p) \in V\)</span></li>
+<li><span class="math inline">\(f\)</span> is smooth at <span class="math inline">\(p\)</span> and <span class="math inline">\(g\)</span> is smooth at <span class="math inline">\(f(p)\)</span></li>
+</ol>
+<p>Then <span class="math inline">\(g \circ f\)</span> is smooth at <span class="math inline">\(p\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-20" class="definition"><strong>Definition 4.2  (Germs) </strong></span>Suppose <span class="math inline">\(M\)</span> is a manifold, and <span class="math inline">\(p \in M\)</span>. The germs of <span class="math inline">\(M\)</span> at <span class="math inline">\(p\)</span> are defined as
+equivalence classes specified on the set of all functionals defined on a neighborhood
+of <span class="math inline">\(p\)</span> such that</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(f \sim g\)</span> if they agrees on a (smaller) neighborhood of <span class="math inline">\(p\)</span>.</li>
+</ol>
+<p>The set of all germs of <span class="math inline">\(M\)</span> at <span class="math inline">\(p\)</span> is denoted as <span class="math inline">\(C^{\infty}_p(M)\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-21" class="definition"><strong>Definition 4.3  </strong></span>In similar fashion, define <span class="math inline">\(C^\infty_p(M, N)\)</span> as equivalance classes on the set of all
+smooth functions defined on a neighborhood of <span class="math inline">\(p \in M\)</span> whose ranges are contained
+in <span class="math inline">\(N\)</span> with the equivalence relation that</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(f \sim g\)</span> if they agrees on a (smaller) neighborhood of <span class="math inline">\(p\)</span>.</li>
+</ol>
+</div>
+<div class="proposition">
+<p><span id="prp:unnamed-chunk-22" class="proposition"><strong>Proposition 4.2  </strong></span>The germs <span class="math inline">\(C^{\infty}_p(M)\)</span> of a manifold at a point is a ring.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-23" class="definition"><strong>Definition 4.4  (Tangent vectors) </strong></span>A <em>derivation</em> or tangent vector at a point <span class="math inline">\(p \in M\)</span> in a manifold is any function <span class="math inline">\(D: C_p^\infty(M) \to \mathbb R\)</span>
+such that
+<span class="math display">\[
+D(fg) = (Df)g(p) + f(p)(Dg)
+\]</span></p>
+<p>The set of all tangent vectors at <span class="math inline">\(p\)</span> is called its tangent space, denoted by <span class="math inline">\(T_pM\)</span>.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:unnamed-chunk-24" class="proposition"><strong>Proposition 4.3  </strong></span>Tangent space at any point in any manifold is a vector space.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-25" class="definition"><strong>Definition 4.5  (Differential) </strong></span>Let <span class="math inline">\(F \in C^\infty_p(M, N)\)</span> be a smooth function defined on an open subset of a manifold <span class="math inline">\(M\)</span>. If <span class="math inline">\(F\)</span> is smooth at <span class="math inline">\(p\)</span>, then its differential
+at <span class="math inline">\(p\)</span> is defined as the map
+<span class="math display">\[
+F_*: T_pM \to T_{f(p)}N
+\]</span>
+such that
+<span class="math display">\[
+F_*(X)(f) = X(f \circ F)
+\]</span>
+for all <span class="math inline">\(f \in C^\infty_{F(p)}(N)\)</span>.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:unnamed-chunk-26" class="proposition"><strong>Proposition 4.4  </strong></span>Differentials are linear transformations between tangent spaces.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-27" class="theorem"><strong>Theorem 4.1  (Chain rule) </strong></span>If <span class="math inline">\(F \in C^\infty_p(M, N), G \in C^\infty_f(p)(N, R)\)</span>, then
+<span class="math display">\[
+(F \circ G)_* = F_* \circ G_*
+\]</span></p>
+</div>
+<div id="bases-for-tangent-spaces" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Bases for Tangent Spaces<a href="tangent-spaces.html#bases-for-tangent-spaces" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unnamed-chunk-28" class="definition"><strong>Definition 4.6  (Partial derivative) </strong></span>If <span class="math inline">\(M\)</span> is a manifold, <span class="math inline">\(p \in M\)</span> is a point, and <span class="math inline">\(\phi: U \to \mathbb R^n\)</span> is a chart centered
+at <span class="math inline">\(p\)</span>. Write
+<span class="math display">\[
+\phi = (x^1, \dots, x^n)
+\]</span>
+where <span class="math inline">\(x^i: U \to \mathbb R^n\)</span>. Define
+<span class="math display">\[
+\frac{\partial}{\partial x^i} \in T_pM
+\]</span>
+with
+<span class="math display">\[
+\frac{\partial}{\partial x^i}f = \left . \frac{\partial(f \circ \phi^{-1})}{\partial r^i} \right \rvert_{\phi(p)}
+\]</span>
+where the right hand side is the usual partial derivative of functions defined in euclidean spaces.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-29" class="theorem"><strong>Theorem 4.2  </strong></span>Let <span class="math inline">\(M\)</span> be a manifold, and <span class="math inline">\(\phi = (x^1, \dots, x^n)\)</span> be a chart at <span class="math inline">\(p \in M\)</span>. The partial derivatives
+<span class="math display">\[
+\frac{\partial}{\partial x^1}, \quad \dots, \quad \frac{\partial}{\partial x^n}
+\]</span>
+make up a basis for <span class="math inline">\(T_pM\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-4" class="proof"><em>Proof</em>. </span>It suffices to prove <span class="math inline">\(T\mathbb H^n\)</span> has dimension <span class="math inline">\(n\)</span>, or that <span class="math inline">\(T\mathbb H^n \simeq R^n\)</span>.
+Apply taylor’s expansion with remainder on any <span class="math inline">\(f \in C^\infty_p(\mathbb R^n)\)</span> with
+<span class="math display">\[
+f(x) = f(p) + \sum (x^i - p^i) g_i(x)
+\]</span>
+where <span class="math inline">\(g_i(p) = \left . \frac{\partial f}{\partial x^i} \right \rvert_p\)</span>.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:unnamed-chunk-31" class="proposition"><strong>Proposition 4.5  </strong></span>If <span class="math inline">\(F \in C^\infty_p(M, N)\)</span>, then in local coordinates,</p>
+<p><span class="math display">\[
+F_*\left (\frac{\partial}{\partial x^i} \right) = \sum \frac{\partial F^i}{\partial x^j} \frac{\partial}{\partial y^i}
+\]</span>
+where
+<span class="math inline">\(F^i = y^i \circ F\)</span>.</p>
+</div>
+</div>
+<div id="tangent-bundle" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Tangent Bundle<a href="tangent-spaces.html#tangent-bundle" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unnamed-chunk-32" class="definition"><strong>Definition 4.7  (Tangent bundle) </strong></span>The disjoint union of all tangent spaces of a manifold is called its tangent bundle:
+<span class="math display">\[
+TM = \bigsqcup T_pM = \bigcup {p} \times T_pM
+\]</span></p>
+<p>The following defines tangent bundle as a topological space.</p>
+<ol style="list-style-type: decimal">
+<li><p>If <span class="math inline">\((U, \phi)\)</span> is a chart of <span class="math inline">\(M\)</span>, define
+<span class="math display">\[
+TU = \bigcup_{p \in U} T_pM
+\]</span></p></li>
+<li><p>The function <span class="math inline">\(\bar\phi: TU \to \phi(U) \times \mathbb R^n\)</span> defined with
+<span class="math display">\[
+\bar \phi(p, v) = (\phi(p), c^1, \dots, c^n)
+\]</span>
+where
+<span class="math display">\[
+v = \sum c^i \left . \frac{\partial}{\partial x^i} \right \rvert_p
+\]</span></p></li>
+<li><p>Transfer the topology from <span class="math inline">\(U\)</span> to <span class="math inline">\(TU\)</span>, making <span class="math inline">\(\bar \phi\)</span> a homeomorphism</p></li>
+<li><p>Define the topology on <span class="math inline">\(TM\)</span> using
+<span class="math display">\[
+\mathcal B = \{ B: \text{$B$ is open in $TU$ for some local coordinate $U \subset M$ } \}
+\]</span>
+as its basis.</p></li>
+</ol>
+<p>The following defines tangent bundle as a smooth manifold.</p>
+<ol style="list-style-type: decimal">
+<li>If <span class="math inline">\(\{(U, \phi)\}\)</span> is an atlas for <span class="math inline">\(M\)</span>, then <span class="math inline">\(\{TU, \bar \phi\}\)</span> is an atlas
+for <span class="math inline">\(TM\)</span>.</li>
+</ol>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="manifolds.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="differential-forms.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
