@@ -65,3 +65,26 @@ A manifold $M$ of dimension $n$ is orientable if and only if there exists a nowh
 Apply partition of unity on the previous theorem.
 
 :::
+
+## Orientation by atlas
+
+::: {.definition name="Oriented altas"}
+
+An atlas $\{(\phi)\}$ is oriented if the Jacobian of the change of coordinates
+$$
+\psi \circ \phi^{-1}
+$$
+is everywhere positive.
+
+:::
+
+::: {.theorem}
+
+An atlas $\{(x^1, \dots, x^n)\}$ is oriented if and only if there exists a orientation $n$-form $\omega$ such that
+$$
+\omega\left ( \frac{\partial}{\partial x^1}, \dots, \frac{\partial}{\partial x^n}  \right ) > 0
+$$
+written in local coordinates.
+
+:::
+
